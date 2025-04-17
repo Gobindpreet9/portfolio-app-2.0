@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Wild West Theme - Light Mode */
+    --background: 39 38% 97%;      /* Sand/Parchment */
+    --foreground: 25 30% 15%;      /* Dark Brown */
+    
+    --card: 39 38% 97%;            /* Light Sand */
+    --card-foreground: 25 30% 15%; /* Dark Brown */
+    
+    --popover: 39 38% 97%;         /* Sand */
+    --popover-foreground: 25 30% 15%;
+    
+    --primary: 25 70% 33%;         /* Rustic Brown */
+    --primary-foreground: 39 38% 97%;
+    
+    --secondary: 28 42% 85%;       /* Light Leather */
+    --secondary-foreground: 25 30% 15%;
+    
+    --muted: 28 42% 85%;           /* Faded Leather */
+    --muted-foreground: 25 35% 35%;
+    
+    --accent: 19 64% 52%;          /* Terracotta */
+    --accent-foreground: 39 38% 97%;
+    
+    --destructive: 0 85% 60%;      /* Red Clay */
+    --destructive-foreground: 39 38% 97%;
+    
+    --border: 25 35% 75%;          /* Weathered Wood */
+    --input: 25 35% 75%;
+    --ring: 25 70% 33%;
+    
+    --radius: 0.5rem;              /* Slightly reduced for a rugged feel */
+  }
+ 
+  .dark {
+    /* Wild West Theme - Dark Mode */
+    --background: 25 30% 15%;      /* Dark Brown */
+    --foreground: 39 38% 97%;      /* Sand */
+    
+    --card: 25 25% 20%;            /* Rich Dark Brown */
+    --card-foreground: 39 38% 97%;
+    
+    --popover: 25 25% 20%;
+    --popover-foreground: 39 38% 97%;
+    
+    --primary: 28 42% 85%;         /* Light Leather */
+    --primary-foreground: 25 30% 15%;
+    
+    --secondary: 25 70% 33%;       /* Rustic Brown */
+    --secondary-foreground: 39 38% 97%;
+    
+    --muted: 25 25% 25%;           /* Deep Brown */
+    --muted-foreground: 28 42% 75%;
+    
+    --accent: 19 64% 52%;          /* Terracotta */
+    --accent-foreground: 39 38% 97%;
+    
+    --destructive: 0 85% 60%;      /* Red Clay */
+    --destructive-foreground: 39 38% 97%;
+    
+    --border: 25 35% 35%;          /* Dark Weathered Wood */
+    --input: 25 35% 35%;
+    --ring: 28 42% 85%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.page-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.section-spacing {
+  @apply space-y-12;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(165,93,39,0.3)] hover:-translate-y-1;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* New styles for the homepage */
+.hero-title {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+  background-size: 200% auto;
+  animation: gradient 8s linear infinite;
+  text-shadow: 0 0 20px hsla(var(--primary) / 0.2),
+               0 0 40px hsla(var(--primary) / 0.2),
+               0 0 60px hsla(var(--primary) / 0.1);
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* SUPPORT NEXTJS ERROR UI */
+nextjs-portal {
+  display: none;
+}
