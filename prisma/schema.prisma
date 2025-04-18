@@ -11,8 +11,8 @@ model Project {
   id          String   @id @default(cuid())
   title       String
   description String
-  techStack   String   // Stored as comma-separated values
-  imageUrl    String?
+  techStack   String[]
+  imageUrl    String
   githubUrl   String?
   liveUrl     String?
   category    String
@@ -38,10 +38,12 @@ model MediaItem {
   id           String   @id @default(cuid())
   type         String   // "book", "movie", "game"
   title        String
-  author       String
-  rating       Float
+  creator      String
+  rating       Int  
   imageUrl     String
   review       String
   dateConsumed DateTime
   isFavorite   Boolean
+  link         String
+  year         Int
 } 

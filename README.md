@@ -33,6 +33,10 @@ Or, if you are connecting to an existing database:
 ```bash
 npx prisma migrate deploy
 ```
+To add data to the database, use Prisma Studio:
+```bash
+npx prisma studio
+```
 
 ### 5. Start the Development Server
 ```bash

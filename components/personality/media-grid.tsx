@@ -5,25 +5,13 @@ import { motion } from "framer-motion"
 import { Star, StarHalf } from "lucide-react"
 import { format } from "date-fns"
 import Image from "next/image"
-
-interface MediaItem {
-  id: string
-  type: "book" | "movie" | "game"
-  title: string
-  author: string
-  rating: number
-  imageUrl: string
-  review: string
-  dateConsumed: Date
-  isFavorite: boolean
-}
+import { MediaItem } from "./media-card"
 
 interface MediaGridProps {
   items: MediaItem[]
-  type: "book" | "movie" | "game"
 }
 
-export function MediaGrid({ items, type }: MediaGridProps) {
+export function MediaGrid({ items }: MediaGridProps) {
   const [flippedCards, setFlippedCards] = useState<string[]>([])
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
@@ -94,7 +82,7 @@ export function MediaGrid({ items, type }: MediaGridProps) {
                 </div>
                 <div className="absolute bottom-0 p-6 text-white">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm opacity-90 mb-2">by {item.author}</p>
+                  <p className="text-sm opacity-90 mb-2">by {item.creator}</p>
                   
                   {hoveredCard === item.id && (
                     <motion.div

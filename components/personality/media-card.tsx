@@ -4,17 +4,18 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star } from "lucide-react"
 
-interface MediaItem {
+export interface MediaItem {
   id: string
-  type: "book" | "movie" | "game"
+  type: "book" | "movie" | "game" | "tv"
   title: string
   imageUrl: string
+  link: string
   rating: number
   review: string
-  author?: string
-  director?: string
-  studio?: string
-  year: string
+  creator?: string
+  dateConsumed: Date
+  isFavorite: boolean
+  year: number
 }
 
 interface MediaCardProps {
@@ -24,19 +25,6 @@ interface MediaCardProps {
 export function MediaCard({ item }: MediaCardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
-
-  const getCreator = () => {
-    switch (item.type) {
-      case "book":
-        return item.author
-      case "movie":
-        return item.director
-      case "game":
-        return item.studio
-      default:
-        return null
-    }
-  }
 
   return (
     <div
@@ -62,7 +50,7 @@ export function MediaCard({ item }: MediaCardProps) {
             {/* Title overlay at top */}
             <div className="absolute inset-x-0 top-0 p-4 bg-gradient-to-b from-black/70 to-transparent">
               <h3 className="text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-sm text-white/80">{getCreator()} • {item.year}</p>
+              <p className="text-sm text-white/80">{item.creator} • {item.year}</p>
             </div>
 
             {/* Rating overlay at bottom - shows on hover */}
@@ -97,7 +85,7 @@ export function MediaCard({ item }: MediaCardProps) {
           <div className="h-full w-full rounded-xl overflow-hidden border-2 bg-card p-6 flex flex-col">
             <h3 className="text-xl font-bold mb-2">{item.title}</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              {getCreator()} • {item.year}
+              {item.creator} • {item.year}
             </p>
             <div className="flex items-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
