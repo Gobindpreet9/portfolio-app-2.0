@@ -7,9 +7,7 @@ export function ResumeSection() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET</h1>
         <div className="space-y-2 text-muted-foreground">
-          <p>78 Doman Road</p>
           <p>Victoria, BC V9A 4E6</p>
-          <p>343-961-3035</p>
           <p>gobindpreet9@gmail.com</p>
           <div className="flex gap-2">
             <a href="https://github.com/Gobindpreet9" className="text-primary hover:underline">Github: Gobindpreet9</a>

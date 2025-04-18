@@ -10,7 +10,7 @@ export default function Home() {
         {/* Photo Section */}
         <div className="relative w-48 h-48 mx-auto md:w-64 md:h-64 rounded-full overflow-hidden bg-muted order-1 md:order-2 ring-2 ring-primary/20 shadow-xl">
           <Image
-            src="/placeholder-avatar.jpg" // Add a placeholder image in the public folder
+            src="/my-photo.jpg"
             alt="Profile photo"
             fill
             className="object-cover"
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="flex gap-4 pt-4">
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="https://github.com" 
+                href="https://github.com/Gobindpreet9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -70,7 +70,7 @@ export default function Home() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/gobindpreet-m-0a1141155/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -81,7 +81,7 @@ export default function Home() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="mailto:your.email@example.com"
+                href="mailto:Gobindpreet9@gmail.com"
                 className="hover:text-primary transition-colors"
               >
                 <Mail className="h-6 w-6" />
