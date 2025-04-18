@@ -52,8 +52,8 @@ export function MediaGrid({ items }: MediaGridProps) {
   }
 
   return (
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((item) => (
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+  {items.map((item) => (
         <div
           key={item.id}
           className="relative h-[400px] perspective-1000"

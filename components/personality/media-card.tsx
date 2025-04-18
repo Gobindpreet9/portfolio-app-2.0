@@ -40,43 +40,44 @@ export function MediaCard({ item }: MediaCardProps) {
       >
         {/* Front of card */}
         <div className="absolute w-full h-full backface-hidden">
-          <div className="relative h-full w-full rounded-xl overflow-hidden border-2 bg-card">
-            <img
-              src={item.imageUrl}
-              alt={item.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            
-            {/* Title overlay at top */}
-            <div className="absolute inset-x-0 top-0 p-4 bg-gradient-to-b from-black/70 to-transparent">
-              <h3 className="text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-sm text-white/80">{item.creator} • {item.year}</p>
-            </div>
+          <div className="relative w-full h-full rounded-xl overflow-hidden border-2 bg-card">
+            <div className="relative aspect-[2/3] w-full h-full overflow-hidden">
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+              {/* Title overlay at top */}
+              <div className="absolute inset-x-0 top-0 p-4 bg-gradient-to-b from-black/70 to-transparent">
+                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                <p className="text-sm text-white/80">{item.creator} • {item.year}</p>
+              </div>
 
-            {/* Rating overlay at bottom - shows on hover */}
-            <AnimatePresence>
-              {isHovered && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent"
-                >
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${
-                          i < item.rating
-                            ? "text-yellow-400 fill-yellow-400"
-                            : "text-gray-400"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+              {/* Rating overlay at bottom - shows on hover */}
+              <AnimatePresence>
+                {isHovered && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent"
+                  >
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-5 h-5 ${
+                            i < item.rating
+                              ? "text-yellow-400 fill-yellow-400"
+                              : "text-gray-400"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
 
