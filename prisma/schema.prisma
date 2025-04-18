@@ -20,3 +20,28 @@ model Project {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model Blog {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  tags        String
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  readTime    String
+  imageUrl    String
+  excerpt     String
+}
+
+model MediaItem {
+  id           String   @id @default(cuid())
+  type         String   // "book", "movie", "game"
+  title        String
+  author       String
+  rating       Float
+  imageUrl     String
+  review       String
+  dateConsumed DateTime
+  isFavorite   Boolean
+} 

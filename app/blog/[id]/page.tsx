@@ -3,7 +3,6 @@ import { formatDistanceToNow, format } from "date-fns"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 // This would typically come from your database
 const getBlogPost = (id: string) => {
@@ -47,8 +46,6 @@ const getBlogPost = (id: string) => {
       readTime: "8 min read",
       imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1932&auto=format&fit=crop",
       excerpt: "Exploring the next frontier of AI technology and its implications for society, business, and human interaction.",
-      author: "Sarah Chen",
-      authorRole: "AI Researcher"
     },
     {
       id: "2",
@@ -86,8 +83,6 @@ const getBlogPost = (id: string) => {
       readTime: "12 min read",
       imageUrl: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=2074&auto=format&fit=crop",
       excerpt: "Learn how to leverage Next.js features to build fast, scalable, and maintainable web applications.",
-      author: "Alex Martinez",
-      authorRole: "Senior Developer"
     },
     // Add more posts here...
   ];
@@ -137,18 +132,6 @@ export default function BlogPost({ params }: { params: { id: string } }) {
         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
           {post.title}
         </h1>
-
-        {/* Author info */}
-        <div className="flex items-center gap-4 py-4">
-          <Avatar className="h-12 w-12 border-2 border-primary">
-            <AvatarImage src={`https://avatar.vercel.sh/${post.author}.png`} />
-            <AvatarFallback>{post.author[0]}</AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-semibold">{post.author}</div>
-            <div className="text-sm text-muted-foreground">{post.authorRole}</div>
-          </div>
-        </div>
 
         {/* Tags */}
         <div className="flex gap-2">

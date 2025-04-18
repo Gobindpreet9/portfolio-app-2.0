@@ -13,13 +13,11 @@ const posts = [
     updatedAt: new Date("2024-03-15"),
     readTime: "8 min read",
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1932&auto=format&fit=crop",
-    excerpt: "Exploring the next frontier of AI technology and its implications for society, business, and human interaction.",
-    author: "Sarah Chen",
-    authorRole: "AI Researcher"
+    excerpt: "Exploring the future of AI beyond LLMs."
   },
   {
     id: "2",
-    title: "Building Scalable Web Applications with Next.js",
+    title: "Building with Next.js 13",
     content: "A comprehensive guide to building modern web applications...",
     tags: "nextjs,react,webdev",
     published: true,
@@ -27,10 +25,8 @@ const posts = [
     updatedAt: new Date("2024-03-10"),
     readTime: "12 min read",
     imageUrl: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=2074&auto=format&fit=crop",
-    excerpt: "Learn how to leverage Next.js features to build fast, scalable, and maintainable web applications.",
-    author: "Alex Martinez",
-    authorRole: "Senior Developer"
-  },
+    excerpt: "Learn how to leverage Next.js features to build fast, scalable, and maintainable web applications."
+  }
   // Add more posts here...
 ];
 

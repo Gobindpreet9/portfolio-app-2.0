@@ -12,9 +12,7 @@ const posts = [
     updatedAt: new Date("2024-03-15"),
     readTime: "8 min read",
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1932&auto=format&fit=crop",
-    excerpt: "Exploring the next frontier of AI technology and its implications for society, business, and human interaction.",
-    author: "Sarah Chen",
-    authorRole: "AI Researcher"
+    excerpt: "Exploring the next frontier of AI technology and its implications for society, business, and human interaction."
   },
   // ... other posts
 ];
