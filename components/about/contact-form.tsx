@@ -16,21 +16,43 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
-    const email = formData.get('email')
-    const subject = formData.get('subject')
-    const message = formData.get('message')
+    const email = formData.get('email') as string
+    const subject = formData.get('subject') as string
+    const message = formData.get('message') as string
+    const website = formData.get('website') as string // honeypot
 
-    // Create mailto URL
-    const mailtoUrl = `mailto:gobindpreet9@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(message as string)}`
+    // Combine subject and message for DB/email
+    const name = subject // Use subject as name for now, or add a name field if you prefer
 
-    // Open default email client
-    window.location.href = mailtoUrl
-
-    setIsSubmitting(false)
-    toast({
-      title: "Email client opened",
-      description: "Your default email client has been opened with the message.",
-    })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message, website }), // include honeypot
+      })
+      if (res.ok) {
+        toast({
+          title: 'Message sent!',
+          description: 'Thank you for reaching out. I will get back to you soon.',
+        })
+        e.currentTarget.reset()
+      } else {
+        const data = await res.json()
+        toast({
+          title: 'Error',
+          description: data.error || 'Something went wrong. Please try again.',
+          variant: 'destructive',
+        })
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Something went wrong. Please try again.',
+        variant: 'destructive',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

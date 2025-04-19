@@ -57,10 +57,33 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 # Node environment
 NODE_ENV=development
+
+# Resend email service
+RESEND_API_KEY=your_resend_api_key
+CONTACT_EMAIL_TO=your_contact_email
+RESEND_FROM_EMAIL=your_verified_sender_email
 ```
 
 - For production, set your actual Postgres connection string in Vercel's project environment variables.
 - Do **not** commit your real `.env` file; only commit `.env.example`.
+
+## Sending Emails with Resend
+
+This project uses [Resend](https://resend.com/) to send email notifications from the contact form. To enable this feature:
+
+1. **Sign up at [Resend](https://resend.com/)** and get your API key.
+2. **Set the following environment variables** in your `.env` file (see `.env.example`):
+   - `RESEND_API_KEY` — Your Resend API key
+   - `CONTACT_EMAIL_TO` — The email address where notifications should be sent
+   - `RESEND_FROM_EMAIL` — The verified sender address from your Resend dashboard
+3. **(Optional)**: For production, verify your domain in the Resend dashboard and use a verified sender address in the API route (set `RESEND_FROM_EMAIL`).
+4. **Install the Resend SDK:**
+   ```sh
+   npm install resend
+   ```
+5. **Deploy or restart your app** after setting the environment variables.
+
+The contact form will POST to `/api/contact`, which saves the message to the database and sends an email notification using Resend.
 
 ## Deployment
 - Deploy seamlessly to Vercel.
