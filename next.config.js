@@ -25,9 +25,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.imgur.com',
-        port: '',
-        pathname: '/**',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'huggingface.co',
       },
     ],
   },
