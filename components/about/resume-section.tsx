@@ -9,11 +9,6 @@ export function ResumeSection() {
         <div className="space-y-2 text-muted-foreground">
           <p>Victoria, BC V9A 4E6</p>
           <p>gobindpreet9@gmail.com</p>
-          <div className="flex gap-2">
-            <a href="https://github.com/Gobindpreet9" className="text-primary hover:underline">Github: Gobindpreet9</a>
-            <span>•</span>
-            <a href="https://linkedin.com/in/Gobindpreet" className="text-primary hover:underline">LinkedIn: Gobindpreet</a>
-          </div>
         </div>
       </div>
 
