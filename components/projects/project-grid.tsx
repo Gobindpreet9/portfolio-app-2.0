@@ -13,7 +13,7 @@ interface Project {
   techStack: string[]
   imageUrl: string
   githubUrl: string
-  liveUrl: string
+  liveUrl?: string
   category: string
   featured: boolean
 }
