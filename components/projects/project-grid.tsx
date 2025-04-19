@@ -24,7 +24,7 @@ interface ProjectGridProps {
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {projects.map((project) => (
         <motion.div
           key={project.id}
@@ -34,12 +34,12 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
           className="group"
         >
           <Card className="overflow-hidden border-2 h-full flex flex-col">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
+          <div className="relative aspect-[4/3] overflow-hidden">
+          <Image
                 src={project.imageUrl}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -49,12 +49,15 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                     GitHub
                   </a>
                 </Button>
+                {/*
+                Hide this for now
                 <Button size="sm" variant="outline" className="bg-background/90 backdrop-blur-sm" asChild>
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <Globe className="w-4 h-4 mr-2" />
                     Live Demo
                   </a>
                 </Button>
+                */}
               </div>
             </div>
 
