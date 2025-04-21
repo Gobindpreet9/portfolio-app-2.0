@@ -9,9 +9,68 @@ import rehypeKatex from "rehype-katex"
 import "katex/dist/katex.min.css"
 import { prisma } from "@/lib/db"
 
-export default async function BlogPost({ params }: { params: { id: string } }) {
+// SEO: Dynamic metadata for each blog post
+import type { Metadata } from "next"
+
+export async function generateMetadata(props: Promise<{ params: { id: string } }>): Promise<Metadata> {
+  const { params } = await props;
+  const { id } = await params;
   const post = await prisma.blog.findUnique({
-    where: { id: params.id },
+    where: { id },
+  })
+
+  if (!post) {
+    return {
+      title: "Post not found | Gobind's Portfolio",
+      description: "This post could not be found.",
+      robots: { index: false, follow: false },
+    }
+  }
+
+  // Use excerpt if available, otherwise fallback to first 150 chars of content
+  const description = post.excerpt || post.content.slice(0, 150).replace(/\n/g, " ") + "..."
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${id}`
+
+  return {
+    title: post.title + " | Gobind's Portfolio",
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      url,
+      type: "article",
+      images: post.imageUrl ? [{ url: post.imageUrl, alt: post.title }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+      images: post.imageUrl ? [post.imageUrl] : [],
+    },
+    other: {
+      // This will be injected in the <head> as a script tag by Next.js
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": description,
+        "image": post.imageUrl ? [post.imageUrl] : [],
+        "author": {
+          "@type": "Person",
+          "name": "Gobindpreet Makkar"
+        },
+        "datePublished": post.createdAt,
+        "dateModified": post.updatedAt,
+        "mainEntityOfPage": url
+      })
+    }
+  }
+}
+
+export default async function BlogPost({ params }: { params: { id: string } }) {
+  const { id } = await params;
+  const post = await prisma.blog.findUnique({
+    where: { id },
   })
 
   if (!post) {

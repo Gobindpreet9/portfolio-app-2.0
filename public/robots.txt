@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gmakkar.ca/sitemap.xml

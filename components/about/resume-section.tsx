@@ -69,8 +69,11 @@ export function ResumeSection() {
         <h2 className="text-2xl font-semibold tracking-tight border-b pb-2">EDUCATION</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-medium">University of Victoria</h3>
-            <p className="text-primary">Victoria, BC</p>
+            <h3 className="text-xl font-medium">Computer Science</h3>
+            <p className="text-primary">University of Victoria, Victoria, BC</p>
+            <div className="flex gap-2 text-muted-foreground mt-1">
+              <span>Jan 2025 - Present</span>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-medium">Computer Engineering Technology</h3>

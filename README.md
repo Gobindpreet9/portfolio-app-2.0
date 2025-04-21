@@ -17,7 +17,7 @@ npm install
 Copy the example `.env` file (or create your own) and fill in your database credentials:
 ```env
 DATABASE_URL=your_postgres_connection_string
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_URL=https://public-url.com
 ```
 
 ### 4. Set Up the Database
@@ -53,7 +53,7 @@ You must set up a `.env` file in your project root with the following variables 
 DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/DATABASE?
 
 # Public URL for your app (used in some client-side code)
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_URL=https://public-url.com
 
 # Node environment
 NODE_ENV=development
