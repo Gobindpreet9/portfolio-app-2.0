@@ -4,6 +4,9 @@ import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import ReactMarkdown from "react-markdown"
+import remarkMath from "remark-math"
+import rehypeKatex from "rehype-katex"
+import "katex/dist/katex.min.css"
 import { prisma } from "@/lib/db"
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
@@ -61,7 +64,12 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
 
       {/* Article Content (Markdown) */}
       <div className="prose prose-lg dark:prose-invert max-w-none">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <ReactMarkdown
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+        >
+          {post.content}
+        </ReactMarkdown>
       </div>
 
       {/* Article Footer */}
