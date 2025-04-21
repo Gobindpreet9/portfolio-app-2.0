@@ -85,6 +85,18 @@ This project uses [Resend](https://resend.com/) to send email notifications from
 
 The contact form will POST to `/api/contact`, which saves the message to the database and sends an email notification using Resend.
 
+## Updating Blog Content from Markdown
+
+To ensure your blog posts in the database retain correct markdown formatting, use the script at `scripts/updatePostContent.js`. This script reads a `.md` file and updates the corresponding post in your Prisma database, preserving all line breaks and markdown structure. This is especially useful if copy-pasting markdown into Prisma Studio causes formatting issues.
+
+**Usage:**
+1. Edit the script to specify the correct markdown file path and blog ID.
+2. Run the script with:
+   ```
+   node scripts/updatePostContent.js
+   ```
+3. Your blog's content will be updated in the database with the properly formatted markdown.
+
 ## Deployment
 - Deploy seamlessly to Vercel.
 - Set your `DATABASE_URL` in Vercel's project environment variables.

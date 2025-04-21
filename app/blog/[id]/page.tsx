@@ -3,6 +3,7 @@ import { formatDistanceToNow, format } from "date-fns"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import ReactMarkdown from "react-markdown"
 import { prisma } from "@/lib/db"
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
@@ -43,13 +44,10 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
           <span>•</span>
           <span>{post.readTime}</span>
         </div>
-        
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight leading-tight text-primary mb-2">
           {post.title}
         </h1>
-
-        {/* Tags */}
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {post.tags.split(',').map((tag) => (
             <span
               key={tag}
@@ -61,11 +59,10 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      {/* Article Content */}
-      <div 
-        className="prose prose-lg dark:prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      {/* Article Content (Markdown) */}
+      <div className="prose prose-lg dark:prose-invert max-w-none">
+        <ReactMarkdown>{post.content}</ReactMarkdown>
+      </div>
 
       {/* Article Footer */}
       <div className="mt-16 pt-8 border-t">
@@ -75,9 +72,10 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
           </div>
           <Link 
             href="/blog" 
-            className="text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-primary hover:underline"
           >
-            More articles
+            <ChevronLeft className="w-4 h-4" />
+            All Posts
           </Link>
         </div>
       </div>

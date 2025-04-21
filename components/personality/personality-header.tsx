@@ -5,7 +5,7 @@ export function PersonalityHeader() {
         My Media Collection
       </h1>
       <p className="text-muted-foreground max-w-[700px] text-lg leading-relaxed">
-        Explore my favorite books, movies, and games. Hover to see ratings and click cards to read my thoughts on each piece of media.
+        Explore my favorite books, series, movies, and games. Hover to see ratings and click cards to read my thoughts on each piece of media.
       </p>
     </div>
   )

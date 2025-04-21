@@ -9,7 +9,7 @@ export function BlogHeader() {
           Insights & Articles
         </h1>
         <p className="text-muted-foreground max-w-[700px] text-lg leading-relaxed">
-          Explore the latest thoughts on technology, development, and design. Deep dives into the future of web development and artificial intelligence.
+          Explore my latest thoughts on technology, development, design and everything in between.
         </p>
       </div>
       <div className="relative max-w-2xl">
