@@ -31,6 +31,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'huggingface.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.claudemcp.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.anthropic.com',
+      },
     ],
   },
 };
