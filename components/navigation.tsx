@@ -13,6 +13,17 @@ import { Menu } from "lucide-react"
 export function Navigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = React.useState(false)
+  const [scrolled, setScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const routes = [
     {
@@ -43,17 +54,17 @@ export function Navigation() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 navbar-animate", scrolled ? "navbar-shadow" : "")}>
       <div className="container flex h-16 items-center">
         {/* Desktop Navigation */}
         <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Link href="/" className="mr-6 flex items-center space-x-2 group">
             <Image
               src="/logo.png"
               alt="Gobind Logo"
               width={48}
               height={48}
-              className="h-12 w-auto"
+              className="h-12 w-auto logo-animate"
             />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -62,7 +73,7 @@ export function Navigation() {
                 key={route.href}
                 href={route.href}
                 className={cn(
-                  "transition-colors hover:text-foreground/80",
+                  "nav-underline transition-colors hover:text-foreground/80",
                   route.active ? "text-foreground" : "text-foreground/60"
                 )}
               >
@@ -89,7 +100,7 @@ export function Navigation() {
                       key={route.href}
                       href={route.href}
                       className={cn(
-                        "px-2 py-1 text-lg transition-colors hover:text-foreground/80",
+                        "nav-underline px-2 py-1 text-lg transition-colors hover:text-foreground/80",
                         route.active ? "text-foreground font-medium" : "text-foreground/60"
                       )}
                       onClick={() => setIsOpen(false)}

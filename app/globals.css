@@ -136,6 +136,71 @@
   100% { background-position: 0% center; }
 }
 
+/* Navigation link underline slide */
+.nav-underline {
+  position: relative;
+  overflow: hidden;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-in-out, cubic-bezier(0.4,0,0.2,1));
+}
+.nav-underline:hover::after,
+.nav-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Button tap/scale effect */
+.button-animate {
+  transition: transform 0.1s cubic-bezier(0.4,0,0.2,1);
+}
+.button-animate:active {
+  transform: scale(0.96);
+}
+
+/* Image hover zoom */
+.img-zoom {
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), filter 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.img-zoom:hover,
+.img-zoom:focus-visible {
+  transform: scale(1.04);
+  filter: brightness(1.08) saturate(1.1);
+}
+
+/* Logo animation */
+.logo-animate {
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.logo-animate:hover,
+.logo-animate:focus-visible {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 0 16px 0 hsla(var(--primary), 0.15), 0 4px 24px 0 hsla(var(--accent), 0.07);
+}
+
+/* Navbar shadow transition */
+.navbar-animate {
+  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.navbar-shadow {
+  box-shadow: 0 2px 24px 0 hsla(var(--primary), 0.08);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+}
+@media (prefers-color-scheme: dark) {
+  .navbar-shadow {
+    background: rgba(30, 22, 13, 0.85);
+  }
+}
+
 /* SUPPORT NEXTJS ERROR UI */
 nextjs-portal {
   display: none;
