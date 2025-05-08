@@ -1,0 +1,5 @@
+# Introduction
+Surprisingly, software is one of the first industries to experience transformation by AI technology. Everyone's what-would-be future was machine taking over manual labor, not knowledge work. But as we stand here in the wake of ChatGPT's disruptive release in December 2021, Software building has changed forever. Constant layoffs plus hire freezes have left the industry bleeding. *Add stats*
+This transformation isn't just changing how we code but also what it means to be a software engineer. I argue that memorizing syntax is no longer one of the goals of engineering, but knowing what you can plan and achieve with the tools at your disposal is. You are no longer the junior dev, AI is, and you are in charge. We will go over some of tips and resources to help you navigate the changing tide to your favor.
+
+### References:
