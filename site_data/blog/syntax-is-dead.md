@@ -26,7 +26,7 @@ Keep your chats small and focused on particular or related topics. Chatbots reme
 
 If a file starts to get too big, it is time to chop it down and refactor properly. SoC will help you and the bot to read your code faster from a high-level perspective and scoping to the appropriate class which has the issue will lead to easier bug fixes. Tech that grows exponentially when not addressed.
 
-For complex issues, if fixing with AI, ask it to investigate the issue first before choosing the path to fix based on the analysis. Sometimes, AI's solutions are not optimal for the larger picture. Take a pause and understand what is best for you at a project and architecture level before moving forward.
+For complex issues, if fixing with AI, ask it to investigate the issue first before choosing the path to fix based on the analysis. Sometimes, AI's solutions are not optimal for the larger picture. Take a pause and understand what is best for you at a project and architecture level before moving forward. AI is great for code analysis or investigating unkown or forgetten parts.
 
 Continuous learning to keep up with ever-evolving tools and technologies is key. If you do not know the full capabilities of the tools, you may be implementing suboptimal solutions. AI may not be fully up to date with the latest trends and best practices either due to knowlefge cut offs or the training data not containing sufficient examples of the best practices.
 
@@ -35,17 +35,25 @@ Generate tests and test cases for your application to avoid breaking changes. Re
 Starting with zero trust system is a better idea for working with AI. AI works great in some areas but that is not always the case. Start slowly, review the changes suggested before proceeding. Review the code of AI, just as in any other person. Make small edits or leave TODO comments to guide the AI further. Do not let the Review debt accumulate to unsustainable levels. The quote by Benjamin Franklin should be wisely heeded -- "An ounce of prevention is worth a pound of cure."
 
 # Beware of the AI Slop
+![Letting AI do all the work](/agent-working.webp)
+*Photo by [Augment Code](https://www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents)*
 I do want to highlight that mediocrity is not always bad, whatever my or yours inner perfectionist may say. Not everything needs to be 100% optimized, but it is important to keep the codebase clean and maintainable. Sometimes, good enough is good enough. We want to spend our valuable time on things that have the most impact, AI gives us that opportunity. Mediocirty asidew, we can't have a terrible mess at our hands if we have any long term plans. While AI is providing us immense productivity gains, it also has downsides. Besides taking over social media feeds, with fake news, and endless brain rot, it can also decay our codebase. 
 
+Over reliance on AI can diminish our critical and creteive thinking according to a recent study by [MIT](https://www.mit.edu/) [here](https://arxiv.org/pdf/2506.08872v1). This makes sense as usually described by the phrase "Use it or lose it". We need to keep our wits sharp and delegating all the tasks to AI without proper review and analysis decreases brain engagement required to stay sharp. While learning is easier than ever before with AI, so is cheating. The best way to use AI is by being engaged and curious, at least for the core parts of your job. 
+
+AI is biased and is an image of people who trained it. Data can be cherry picked and behavior can be tuned post-training to mirror the identity and beliefs of the people who trained it. Do not take AI as the source of truth. This may not always directly affect the code but talking with it may effect your thoughts and decisions. AI bots can be used to spread propaganda and fake news. Recently X AI's Grok caused some headlines by steering seemingly unreleated conversations to the topic of 'white genocide'. [This](https://umbc.edu/stories/groks-white-genocide-responses-show-how-generative-ai-can-be-weaponized/) is just a small example. There can be other very subtle ways AI can manipulate our thoughts and decisions without us even realizing it. I would like to disucss this more in depth in a future article.
 
 Recently security researchers found that hackers are taking advantage of AI hallucinations to sneak malicious packages into our code. Some of the common hallucinated package names have been downloading thousands of time, highlighting the magnitude of the issue. See more [here](https://www.itpro.com/security/hackers-are-taking-advantage-of-ai-hallucinations-to-sneak-malicious-software-packages-onto-enterprise-repositories).
 
 # Resources to level up
 
 # What happens when Copilot becomes the Pilot?
-
+So far, AI has been playing on the turf of humans. The IDE's for example are created for human use, not AI. A lot of tools have been created for AI to have easier access to same tools as us but it is still a work in progress. Besides this AI is still not as smart as humans for general tasks across a range of domains needing interaction with different environments and tools, even though it may be smarter in terms raw knowledge. There will, none the less, be a point where AI will be the Pilot. It is a question of when, not if. When the day comes, we will have to adapt to survive this new reality. Adapting well to it will help us thrive.  
 
 ### References:
 https://hapy.co/journal/principles-of-coding/
 https://www.geeksforgeeks.org/7-common-programming-principles-that-every-developer-must-follow/
 https://www.itpro.com/security/hackers-are-taking-advantage-of-ai-hallucinations-to-sneak-malicious-software-packages-onto-enterprise-repositories
+https://arxiv.org/pdf/2506.08872v1
+https://www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents
+https://umbc.edu/stories/groks-white-genocide-responses-show-how-generative-ai-can-be-weaponized/
