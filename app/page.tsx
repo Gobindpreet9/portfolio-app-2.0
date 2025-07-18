@@ -89,11 +89,6 @@ export default function Home() {
                 Neuroscience and climate change.
               </motion.p>
               <motion.p variants={itemVariants}>
-                Balancing full-time work with part-time studies at the University of Victoria, 
-                I am constantly expanding my knowledge and skills to stay at the forefront of 
-                technology.
-              </motion.p>
-              <motion.p variants={itemVariants}>
                 When not coding, you'll find me on the soccer field, playing guitar, or 
                 exploring new ideas through books - always seeking ways to blend creativity 
                 with technical innovation.
