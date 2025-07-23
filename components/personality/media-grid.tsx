@@ -108,7 +108,7 @@ export function MediaGrid({ items }: MediaGridProps) {
                 <div className="flex items-center gap-1 mb-4">
                   {renderStars(item.rating)}
                 </div>
-                <p className="text-muted-foreground flex-grow overflow-y-auto max-h-50 media-review-scroll">{item.review}</p>
+                <p className="text-muted-foreground flex-grow overflow-y-auto max-h-50 card-scroll">{item.review}</p>
                 <div className="mt-4 pt-4 border-t text-sm text-muted-foreground">
                   Experienced on {format(item.dateConsumed, 'MMMM d, yyyy')}
                 </div>

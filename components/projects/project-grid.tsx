@@ -49,15 +49,14 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                     GitHub
                   </a>
                 </Button>
-                {/*
-                Hide this for now
-                <Button size="sm" variant="outline" className="bg-background/90 backdrop-blur-sm" asChild>
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <Globe className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </a>
-                </Button>
-                */}
+                {project.liveUrl && (
+                  <Button size="sm" variant="outline" className="bg-background/90 backdrop-blur-sm" asChild>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <Globe className="w-4 h-4 mr-2" />
+                      Web Link
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
 
@@ -70,13 +69,13 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                   </span>
                 )}
               </div>
-              <CardDescription className="line-clamp-2">
+              <CardDescription className="h-24 overflow-y-auto card-scroll">
                 {project.description}
               </CardDescription>
             </CardHeader>
 
-            <CardContent className="flex-grow">
-              <div className="flex flex-wrap gap-2">
+            <CardContent className="flex-grow flex flex-col">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}

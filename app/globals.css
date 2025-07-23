@@ -121,18 +121,18 @@
 }
 
 /* Custom themed scrollbar for review area */
-.media-review-scroll {
+.card-scroll {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--card));
 }
-.media-review-scroll::-webkit-scrollbar {
+.card-scroll::-webkit-scrollbar {
   width: 8px;
 }
-.media-review-scroll::-webkit-scrollbar-thumb {
+.card-scroll::-webkit-scrollbar-thumb {
   background: hsl(var(--muted-foreground));
   border-radius: 6px;
 }
-.media-review-scroll::-webkit-scrollbar-track {
+.card-scroll::-webkit-scrollbar-track {
   background: hsl(var(--card));
   border-radius: 6px;
 }

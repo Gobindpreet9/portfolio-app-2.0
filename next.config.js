@@ -39,6 +39,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.anthropic.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'uveec.ca',
+      },
     ],
   },
 };
