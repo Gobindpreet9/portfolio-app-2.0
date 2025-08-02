@@ -7,7 +7,7 @@ export function ResumeSection() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET</h1>
         <div className="space-y-2 text-muted-foreground">
-          <p>Victoria, BC V9A 4E6</p>
+          <p>Victoria, BC, Canada</p>
           <p>gobindpreet9@gmail.com</p>
         </div>
       </div>
@@ -26,10 +26,12 @@ export function ResumeSection() {
               <Badge variant="outline">August 2024 - PRESENT</Badge>
             </div>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Led development of RESTful APIs in .NET Core 8 for microservices application, reducing response times by 30% through optimization techniques</li>
-              <li>Contributed to company's products evolution towards cloud-native, scalable microservices architecture using Azure and GitHub Actions for CI/CD</li>
-              <li>Enhanced database performance through complex SQL queries and stored procedures</li>
-              <li>Ensured product reliability through unit and automated tests within CI/CD pipelines</li>
+              <li>Served as Scrum Master, facilitating agile ceremonies and removing impediments to ensure the team consistently met sprint goals and project deadlines</li>
+              <li>Spearheaded the product's transition from a B2B to a SaaS model by delivering the critical functionality required for a successful day-one launch</li>
+              <li>Optimized data flow efficiency by 50%, reducing data import processing time by 30 minutes, by managing robust import/export processes that ensured 100% data validation and integrity</li>
+              <li>Re-architected the PostgreSQL database schema and optimized crucial SQL queries and stored procedures, achieving a 70% improvement in data retrieval speeds for key application dashboards</li>
+              <li>Facilitated seamless data exchange between microservices and a modern React/Redux UI by developing and consuming RESTful APIs</li>
+              <li>Streamlined the deployment pipeline by contributing to a cloud-native architecture on Azure, utilizing GitHub Actions for CI/CD, and configuring critical data-related containers like keycloak, opa, grafana, prometheus</li>
             </ul>
           </div>
 
@@ -39,13 +41,13 @@ export function ResumeSection() {
                 <h3 className="text-xl font-medium">Software Engineer</h3>
                 <p className="text-primary font-medium">Infovista</p>
               </div>
-              <Badge variant="outline">Jan 2022 - July 2024</Badge>
+              <Badge variant="outline">January 2022 - July 2024</Badge>
             </div>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Optimized software performance achieving 2x to 20x improvements using advanced algorithms</li>
-              <li>Led transition from .NET Framework to .NET Core</li>
-              <li>Resolved critical bugs and introduced new features in WPF desktop applications</li>
-              <li>Integrated third-party libraries addressing security vulnerabilities</li>
+              <li>Improved software performance by 2x-20x through targeted optimizations and a successful migration of the application from .NET Framework to .NET Core</li>
+              <li>Resolved over 25 critical, customer-impacting bugs and implemented 18+ new features for both WPF desktop applications and RESTful APIs, significantly improving software stability and functionality</li>
+              <li>Streamlined deployment and scaling operations by managing Docker containers and their lifecycle within a Kubernetes environment</li>
+              <li>Proactively managed and updated third-party libraries, promptly addressing security vulnerabilities (CVEs) to ensure system robustness and compliance</li>
             </ul>
           </div>
         </div>
@@ -55,12 +57,13 @@ export function ResumeSection() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight border-b pb-2">SKILLS</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          <SkillCategory title="DevOps & Cloud" skills={["Docker", "Kubernetes", "Azure", "Github Actions"]} />
-          <SkillCategory title="Languages" skills={["C#", "Java", "C++", "Python", "Javascript"]} />
-          <SkillCategory title="Databases" skills={["PostgreSQL", "MySQL", "MongoDB"]} />
-          <SkillCategory title="Web/Mobile Dev" skills={["React JS", "Flutter", "ReactNative"]} />
-          <SkillCategory title="Machine Learning" skills={["Algorithms", "Tensorflow", "Langchain", "LLMs", "RAG"]} />
-          <SkillCategory title="Tools & OS" skills={["Git/GitHub", "Visual Studio", "Jetbrains", "Windows", "Linux"]} />
+          <SkillCategory title="DevOps & Cloud" skills={["Docker", "Kubernetes", "Azure", "GitHub Actions", "CI/CD", "Helm"]} />
+          <SkillCategory title="Languages" skills={["C#", "Python", "Java", "TypeScript", "JavaScript"]} />
+          <SkillCategory title="Databases" skills={["PostgreSQL", "MongoDB", "Microsoft SQL Server", "PL/SQL"]} />
+          <SkillCategory title="Web & Mobile" skills={["React", "Next.js", "Redux", ".NET", "RESTful APIs", "Flutter", "WPF"]} />
+          <SkillCategory title="AI & Machine Learning" skills={["Langchain", "LLMs", "RAG", "Google ADK", "Hugging Face", "n8n"]} />
+          <SkillCategory title="Tools & OS" skills={["Git", "GitHub", "Visual Studio", "Cursor", "Claude Code", "Windows", "Linux (WSL)"]} />
+          <SkillCategory title="Other" skills={["ROS2", "STM32", "Raspberry Pi"]} />
         </div>
       </section>
 
@@ -69,19 +72,23 @@ export function ResumeSection() {
         <h2 className="text-2xl font-semibold tracking-tight border-b pb-2">EDUCATION</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-medium">Computer Science</h3>
-            <p className="text-primary">University of Victoria, Victoria, BC</p>
-            <div className="flex gap-2 text-muted-foreground mt-1">
-              <span>Jan 2025 - Present</span>
-            </div>
-          </div>
-          <div>
             <h3 className="text-xl font-medium">Computer Engineering Technology</h3>
             <p className="text-primary">Algonquin College, Ottawa, ON</p>
             <div className="flex gap-2 text-muted-foreground mt-1">
-              <span>Jan 2019 - December 2021</span>
+              <span>Jan 2019 – Dec 2021</span>
               <span>•</span>
               <span>GPA: 3.98/4.0</span>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-medium">Computer Science (Part-time)</h3>
+            <p className="text-primary">University of Victoria, Victoria, BC</p>
+            <div className="flex gap-2 text-muted-foreground mt-1">
+              <span>Jan 2025 – Sept 2025</span>
+              <span>•</span>
+              <span>Advanced coursework completed while working full-time</span>
+              <span>•</span>
+              <span>GPA: 9.0/9.0</span>
             </div>
           </div>
         </div>
@@ -93,7 +100,15 @@ export function ResumeSection() {
         <div className="space-y-2">
           <h3 className="font-medium">Hobbies & Interests</h3>
           <div className="flex flex-wrap gap-2">
-            {["Soccer", "Video Games", "Reading", "Guitar", "Quantum Computing", "Machine Learning"].map((hobby) => (
+            {[
+              "Soccer", 
+              "Books", 
+              "Guitar", 
+              "Hiking", 
+              "AI", 
+              "Blogging",
+              "Video Games"
+            ].map((hobby) => (
               <Badge key={hobby} variant="secondary">{hobby}</Badge>
             ))}
           </div>
