@@ -22,29 +22,34 @@ As AI takes over the lower level tasks, our human skills become more important t
 
 ## Working with AI: Principles and Best Practices
 
-Microsoft named it perfectly by calling it copilot; that means you're still in charge. If you don't find yourself pushing back or taking a different approach then recommended by AI, it is a good indicator to stop and reassess the project's direction. Here are some principles and practices to help you effectively partner with your new AI assistant.
+Gen AI has been transforming the way we build software. It is great to test out MVP's, prototype initial ideas and handle all the boilerplate or lower level stuff so you can devote your energy to maximize impact to drive business innovation. The days of lorem ipsum are in the past.
+
+In AI, it is often said context is king. A lot of work has recently gone into providing AI better context of your code such as agentic mode, semantic search, file access and MCP tools. All of this can be seen in AI code tools like Cursor, Windsurf, Claude Code, and Github Copilot. However it is still prone to hallucinations (making stuff up) and mistakes.
+
+That's why great models are not enough these days; the ecosystem around them matters more. Copying code from chatbot online is not a bad idea, but it is not effective or efficient anymore. The agentic workflows in latest AI code tools are a game-changer. They are tightly integrated with your working environment, provide better context to the LLM and can iterate for minutes to hours now on a given request. They allow you to make the changes in real-time, which you may accept, reject or modify right there. They can search the filesystem, create new files, and even run commands. This is a huge power-up over chatting. Other best AI tools are also more than chatbots or raw models. Look at this video of a new AI IDE by Amazon called [Kiro](https://www.youtube.com/watch?v=JOqLp1adGO4&t=13s&ab_channel=Kiro). This short 3 minute video is a great introduction to this new era of AI tools and I love their idea of spec based vs vibe coding.
+
+Despite all these improvements, Microsoft has named it perfectly by calling it copilot; that means you're still in charge. If you never find yourself questioning or redirecting AI's suggestions, it's time to reassess your approach. Here are some principles and practices to help you effectively partner with your new AI assistant.
 
 ### Foundational Principles
 
-Ensure modularity, readability, security and simplicity. Keep principles like SOLID, DRY (Don't Repeat Yourself), KISS (Keep It Short And Simple) and SoC (Separation of Concerns) to create a quality product that can be iterated on and stand longer than 5 prompts. Gen AI is great to test out MVP's, prototype initial ideas and handle all the boilerplate stuff so you can devote your energy to maximize impact to drive business innovation. The days of lorem ipsum are in the past. Populating with relevant demo data has never been simpler.
+Make sure the architecture is sound from the start so that maintaining it in the future is achievable for both you and your LLM partner. Treat your AI as a new-grad, enthusiastic, full of knowledge but lacking the bigger context. I like the analogy of broken windows from the book 'The Pragmatic Programmer' when talking about quality. When a building has a broken window, it sends a signal that anything goes, and soon the building will be in a state of disrepair. Small details matter.
 
-### Working with Your AI Partner
-
-Make sure the architecture is sound from the start so that maintaining it in the future is achievable for both you and your LLM partner. Treat your AI as a new-grad, enthusiastic, full of knowledge but lacking the bigger context. In AI, it is often said context is king. A lot of work has recently gone into providing AI better context of your code such as agentic mode, semantic search, file access and MCP tools. All of this can be seen in AI code tools like Cursor, Windsurf, Claude Code, and Visual Studio. However it is still prone to hallucinations (making stuff up) and mistakes.
-
-That's why great models are not enough these days; the ecosystem around them matters more. Copying code from chatbot online is not a bad idea, but it is not effective or efficient. The agentic workflows in latest AI code tools are a game-changer. They are tightly integrated with your working environment, provide better context to the LLM and can iterate for minutes to hours now on a given request. They allow you to make the changes in real-time, which you may accept, reject or modify right there. They can search the filesystem, create new files, and even run commands. This is a huge power-up over chatting. Other best AI tools are also more than chatbots or raw models. Look at this video of a new AI IDE by Amazon called [Kiro](https://www.youtube.com/watch?v=JOqLp1adGO4&t=13s&ab_channel=Kiro). This short 3 minute video is a great introduction to this new era of AI tools and I love their idea of spec based vs vibe coding.
-
-### Effective Communication (Prompting)
+Make sure that your product is built with quality in mind from the start. Ensure modularity, readability, security and simplicity. Keep principles like SOLID, DRY (Don't Repeat Yourself), KISS (Keep It Short And Simple) and SoC (Separation of Concerns) to create a quality product that can be iterated on and stand longer than 5 prompts. 
 
 Prompting the LLM is a challenge in itself. Prompt engineering is the art of designing instructions to get desired outputs. And believe me, instructing in a clear, concise way is a lot harder than you think. As humans we assume a lot about the knowledge of others around us so the instructions are not detailed. I love this playful video that gets the point across [Exact Instructions Challenge for Peanut Butter Sandwich](https://www.youtube.com/watch?v=cDA3_5982h8&ab_channel=JoshDarnit). For example while you're building with your copilot you may decide to change your approach in the middle of development. If you do not ask explicitly it may leave some dead code from the previous attempt which will bloat your codebase, making it difficult to navigate and understand. In general be explicit about your objectives, sometimes it is even a good idea to fine-tune your prompt using AI before execution example - "Help me plan how to add a testimonial section without making any changes."
 
 ### Development Workflow & Best Practices
 
+#### 1. Maintain Momentum and Safety
 - **Iterate and Commit:** Mastery of source control is essential to not lose valuable progress. It is better to build iteratively step by step achieving one goal at a time. Test out your changes to make sure they work as expected, review for clean code, then stage our commit your changes before proceeding to improve or build another feature. We don't play games without checkpoints and neither should we code without them.
+- **Stay Focused:** Keep your chats small and focused on particular or related topics. Chatbots remember the current session's chat history which can overload the context window making the response more prone to hallucinations. If you know the file that needs to be created or edited, mention it and reference it directly to save your precious resources (usually done by @file-name or @method-name). Breaking complex talks into actionable steps will provide better results.
+
+#### 2. Uphold Quality and Standards
 - **Test Rigorously:** Generate tests and test cases for your application, having both unit and integration tests. Unit tests cover functionality of a single component or function. Integration tests cover the interaction between different components or modules. Best practice is to run them often, ideally after completion of small features or tasks to make sure they do not break existing functionality. Test driven development (TDD) can also help to produce a stable and reliable codebase. In TDD, you write tests before writing the code.
 - **Document Diligently:** Document your project properly describing the structure, how to run, .env.example file, debugging tips etc. in the README.md. This is historically one of the most neglected and underrated process of software development. It will save you a lot of sweat and pain when you're coming back to your project 3 months later.
 - **Refactor Ruthlessly:** If a file starts to get too big, it is time to chop it down and refactor properly. SoC will help you and the bot to read your code faster from a high-level perspective and scoping to the appropriate class which has the issue will lead to easier bug fixes. Tech debt grows exponentially when not addressed.
-- **Stay Focused:** Keep your chats small and focused on particular or related topics. Chatbots remember the current session's chat history which can overload the context window making the response more prone to hallucinations. If you know the file that needs to be created or edited, mention it and reference it directly to save your precious resources (usually done by @file-name or @method-name). Breaking complex talks into actionable steps will provide better results.
+
+#### 3. Master the Human-AI Interface
 - **Trust but Verify:** Starting with zero trust system is a better idea for working with AI. AI works great in some areas but that is not always the case. Start slowly, review the changes suggested before proceeding. Review the code of AI, just as in any other person. Make small edits or leave TODO comments to guide the AI further. Do not let the Review debt accumulate to unsustainable levels. The quote by Benjamin Franklin should be wisely heeded: "An ounce of prevention is worth a pound of cure."
 - **Use System Prompts:** Use proper system prompts to teach AI your standards and values. You can keep a .md file with code guidelines, best practices, and other important information which can be referenced by AI. It will help keep consistency for maintainability and readability requiring less changes in refactoring.
 - **Leverage Popular Tools:** Use popular frameworks and libraries to build your application. AI systems will work better with popular tools because there likely exists good documentation and plethora of examples for them to learn from. Less popular languages and frameworks may not have as much support and may be more prone to hallucinations.
@@ -75,22 +80,24 @@ While AI is providing us immense productivity gains, it also has downsides. Besi
 Over-reliance on AI can diminish our critical and creative thinking according to a [recent MIT study](https://arxiv.org/pdf/2506.08872v1). This makes sense as usually described by the phrase "Use it or lose it". We need to keep our wits sharp and delegating all the tasks to AI without proper review and analysis decreases brain engagement required to stay sharp. While learning is easier than ever before with AI, so is cheating. The best way to use AI is by being engaged and curious, at least for the core parts of your job.
 
 ### Security Risks
-Overreliance on AI can increase the risk of vulnerabilities if users uncritically accept weak code that may introduce insecure patterns, inadequate authentication, or unsafe handling of user inputs. Recently security researchers found that hackers are taking advantage of AI hallucinations to sneak malicious packages into our code. Some of the common hallucinated package names have been downloaded thousands of times, highlighting the magnitude of the issue. See more [here](https://www.itpro.com/security/hackers-are-taking-advantage-of-ai-hallucinations-to-sneak-malicious-software-packages-onto-enterprise-repositories). AI also is an invaluable tool for hackers. It can speed up the creation of new malware, find vulnerabilities, and spread malware using social engineering techniques. Trying to end on a good note, I would like to mention [Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/) by Microsoft has been designed to use AI in the fight against malware. It automates malware classification in a gold standard: fully reverse engineering a software file without any clues about its origin or purpose. This could be a massive game-changer for cybersecurity.
+Overreliance on AI can increase the risk of vulnerabilities if users uncritically accept weak code that may introduce insecure patterns, inadequate authentication, or unsafe handling of user inputs. Recently security researchers found that hackers are taking advantage of AI hallucinations to sneak malicious packages into our code, as covered by [ITPro](https://www.itpro.com/security/hackers-are-taking-advantage-of-ai-hallucinations-to-sneak-malicious-software-packages-onto-enterprise-repositories). Some of the common hallucinated package names have been downloaded thousands of times, highlighting the magnitude of the issue. AI also is an invaluable tool for hackers, especially jailbroken versions like [WormGPT](https://slashnext.com/blog/wormgpt-the-generative-ai-tool-cybercriminals-are-using-to-launch-business-email-compromise-attacks/). It can speed up the creation of new malware, find vulnerabilities, and spread malware using social engineering techniques. Trying to end on a good note, I would like to mention [Project Ire](https://www.microsoft.com/en-us/research/blog/project-ire-autonomously-identifies-malware-at-scale/) by Microsoft has been designed to use AI in the fight against malware. It automates malware classification in a gold standard: fully reverse engineering a software file without any clues about its origin or purpose. This could be a massive game-changer for cybersecurity.
+
+### IP, Copyright, and Compliance Risks
+The training data used for AI model training is already a controversial issue. On top of that we must remember that any data we provide to it can, and probably is, used to train AI further. Never share sensitive information, trade secrets, or personally identifiable information in your prompts.
+
+Furthermore, the legal landscape around gen AI is still a grey area. While people don't care as much about it in the coding paradigm, it is still a matter of concern. You may unknowingly use copyrighted material of others without their permission. AI can also generate code that may be protected by patents or trademarks. At least it is not as bad as the Hollywood industry for us coders.
 
 ### Bias and Manipulation
 AI is biased and reflects the people who trained it. Data can be cherry picked and behavior can be tuned post-training to mirror the identity and beliefs of the people who trained it. Do not take AI as the source of truth. This may not always directly affect the code, but talking with it may affect your thoughts and decisions. AI bots can be used to spread propaganda and fake news. Recently X AI's Grok caused some headlines by steering seemingly unrelated conversations to the topic of 'white genocide'. [This](https://umbc.edu/stories/groks-white-genocide-responses-show-how-generative-ai-can-be-weaponized/) is just a small example. There are other very subtle ways AI can manipulate our thoughts and decisions without us even realizing it. I would like to discuss this more in depth in a future article.
 
-### IP and Compliance Risks
-The training data used for AI model training is already a controversial issue. On top of that we must remember that any data we provide to it can, and probably is, used to train AI further. We should keep this in mind before giving away our most valuable IP, ideas, and secrets.
-
 #### Common Pitfalls Checklist
-| Pitfall | How to Avoid It |
+| Category | Pitfall & How to Avoid It |
 |---|---|
-| **AI Slop** | Ruthlessly refactor messy code. Don't let "good enough" become a technical debt crisis. |
-| **Cognitive Decline** | Stay engaged. Use AI as a tool to augment your thinking, not replace it. |
-| **Security Risks** | Scrutinize dependencies and treat AI-generated code as you would any third-party code. |
-| **Data Privacy** | Never share proprietary code, secrets, or sensitive data with public AI models. |
-| **Model Bias** | Be critical of AI outputs and cross-reference important information. |
+| **Code & Cognitive Health** | **Pitfall:** Allowing "AI Slop" to degrade the codebase.<br>**Avoidance:** Balance speed with quality. Refactor AI code and don't let tech debt accumulate. |
+| | **Pitfall:** Cognitive decline from over-reliance on AI.<br>**Avoidance:** Stay engaged. Use AI to augment, not replace, your critical thinking. |
+| **Security & Compliance** | **Pitfall:** Introducing security vulnerabilities or malicious packages.<br>**Avoidance:** Rigorously review all AI-generated code and dependencies. Never trust blindly. |
+| | **Pitfall:** Violating IP, copyright, or licensing terms.<br>**Avoidance:** Never share sensitive data. Review code for potential license laundering. |
+| **Bias & Manipulation** | **Pitfall:** Being influenced by model bias or manipulation.<br>**Avoidance:** Treat AI as a tool, not a source of truth. Be critical of its outputs and perspectives. |
 
 ## Looking Ahead: When the Copilot Becomes the Pilot
 
@@ -104,11 +111,12 @@ I am familiar with and use most of the resources mentioned in this article. I ha
 
 ### General Software Engineering
 #### Websites / Blogs
-[Hacksplaining](https://www.hacksplaining.com/lessons)
 [Dev.to](https://dev.to/)
-[High Scalability](https://highscalability.com/)
 [Refactoring Guru](https://refactoring.guru/)
+[High Scalability](https://highscalability.com/)
+[Hacksplaining](https://www.hacksplaining.com/lessons)
 [Over The Wire](https://overthewire.org/wargames/)
+[Knightlab - SQL Murder Mystery](https://mystery.knightlab.com/)
 
 #### Podcasts
 [Tech Brew Ride Home](https://open.spotify.com/show/1jBNbPVlGUen3sWdd25ho6?si=b2068c472d2a4ddc)
@@ -129,6 +137,8 @@ I am familiar with and use most of the resources mentioned in this article. I ha
 #### Websites / Blogs
 [Hugging Face Blog](https://huggingface.co/blog)
 [The Neuron Daily](https://www.theneurondaily.com/)
+[Kaggle](https://www.kaggle.com/)
+[TensorFlow Playground](https://playground.tensorflow.org/)
 
 #### Podcasts
 [The AI Daily Brief](https://open.spotify.com/show/7gKwwMLFLc6RmjmRpbMtEO)
