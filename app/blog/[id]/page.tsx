@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown"
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import rehypeRaw from "rehype-raw"
+import rehypeSlug from "rehype-slug"
 import "katex/dist/katex.min.css"
 import remarkGfm from "remark-gfm"
 import { prisma } from "@/lib/db"
@@ -128,7 +129,7 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
       <div className="prose prose-lg dark:prose-invert max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
-          rehypePlugins={[rehypeKatex, rehypeRaw]}
+          rehypePlugins={[rehypeKatex, rehypeRaw, rehypeSlug]}
           components={MarkdownComponents}
         >
           {post.content}

@@ -1,7 +1,7 @@
 ## TLDR
 **The era of syntax memorization is over.** AI transforms development by handling boilerplate while developers focus on architecture, system design, and strategic thinking. Success requires mastering human-AI collaboration while avoiding common pitfalls.
 
-**Navigate to:** [Core Competencies Today](#core-competencies-today) | [Best Practices Checklist](#best-practices-checklist) | [Common Pitfalls Checklist](#common-pitfalls-checklist) | [Security Risks](#security-risks)
+**Navigate to:** [Core Competencies Today](#core-competencies-today) | [Best Practices Checklist](#best-practices-checklist) | [Common Pitfalls Checklist](#common-pitfalls-checklist) | [Security Risks](#security-risks) | [Resources to Level Up](#resources-to-level-up)
 
 ## Introduction
 
