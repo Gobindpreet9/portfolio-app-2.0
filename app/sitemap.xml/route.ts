@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/db"
 
+export const revalidate = 172800 // Revalidate sitemap every 2 days
+
 export async function GET() {
   // Fetch all published blog posts
   const posts = await prisma.blog.findMany({
