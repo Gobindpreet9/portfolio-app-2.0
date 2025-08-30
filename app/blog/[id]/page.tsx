@@ -6,9 +6,11 @@ import Image from "next/image"
 import ReactMarkdown from "react-markdown"
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
+import rehypeRaw from "rehype-raw"
 import "katex/dist/katex.min.css"
 import remarkGfm from "remark-gfm"
 import { prisma } from "@/lib/db"
+import { MarkdownComponents } from "@/components/blog/markdown-components"
 
 // SEO: Dynamic metadata for each blog post
 import type { Metadata } from "next"
@@ -126,7 +128,8 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
       <div className="prose prose-lg dark:prose-invert max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
-          rehypePlugins={[rehypeKatex]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
+          components={MarkdownComponents}
         >
           {post.content}
         </ReactMarkdown>

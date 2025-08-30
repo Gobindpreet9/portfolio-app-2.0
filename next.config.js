@@ -43,6 +43,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'uveec.ca',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.kym-cdn.com',
+      },
     ],
   },
 };
