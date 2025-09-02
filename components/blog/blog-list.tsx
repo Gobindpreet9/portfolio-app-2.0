@@ -2,7 +2,6 @@ import { formatDistanceToNow } from "date-fns"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface BlogPost {
   id: string
@@ -50,19 +49,21 @@ export function BlogList({ posts }: BlogListProps) {
                 </CardDescription>
               </div>
             </CardHeader>
-            <hr className="border-muted-foreground/20 mx-6" />
-            <CardContent className="p-6 pt-3 mt-auto">
-              <div className="flex flex-wrap gap-2">
-                {post.tags.split(',').map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-accent/20 text-accent-foreground px-3 py-1 rounded-full text-xs font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
+            <div className="mt-auto">
+              <hr className="border-muted-foreground/20 mx-6" />
+              <CardContent className="p-6 pt-3">
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.split(',').map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-accent/20 text-accent-foreground px-3 py-1 rounded-full text-xs font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </div>
           </Card>
         </Link>
       ))}
