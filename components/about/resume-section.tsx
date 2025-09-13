@@ -23,7 +23,7 @@ export function ResumeSection() {
                 <h3 className="text-xl font-medium">Senior Software Engineer</h3>
                 <p className="text-primary font-medium">Persistent Systems</p>
               </div>
-              <Badge variant="outline">August 2024 - PRESENT</Badge>
+              <Badge variant="outline">August 2024 - September 2025</Badge>
             </div>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>Served as Scrum Master, facilitating agile ceremonies and removing impediments to ensure the team consistently met sprint goals and project deadlines</li>

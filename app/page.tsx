@@ -82,16 +82,17 @@ export default function Home() {
               variants={containerVariants} 
             >
               <motion.p variants={itemVariants}>
-                A self-driven tech enthusiast who builds innovative solutions through code. 
-                Bringing a unique perspective shaped by philosophy, psychology, and diverse 
-                cultural interactions to solve complex technical challenges. Passionate about 
-                making an impact in the fields of Artificial Intelligence, Quantum Computing, 
-                Neuroscience and climate change.
+              I write code that always works on the first try, architect systems that 
+              scale beyond my expectations, and debug problems that only happen on Fridays. 
+              Philosophy keeps me sane when the stack traces get existential,
+              and psychology helps me understand why users click the one button I didn't 
+              expect.
               </motion.p>
               <motion.p variants={itemVariants}>
-                When not coding, you'll find me on the soccer field, playing guitar, or 
-                exploring new ideas through books - always seeking ways to blend creativity 
-                with technical innovation.
+              Between soccer games where I learn about teamwork and guitar sessions 
+              where I learn about timing, I'm exploring how we can use AI and quantum
+              computing to tackle the big problems - like making sure future developers don't 
+              curse my variable names.
               </motion.p>
             </motion.div>
           </motion.div>
