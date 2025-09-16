@@ -53,6 +53,14 @@ export function Navigation() {
     },
   ]
 
+  if (process.env.NODE_ENV === 'development') {
+    routes.push({
+      href: "/style-guide",
+      label: "Style Guide",
+      active: pathname === "/style-guide",
+    });
+  }
+
   return (
     <header className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 navbar-animate", scrolled ? "navbar-shadow" : "")}>
       <div className="container flex h-16 items-center">

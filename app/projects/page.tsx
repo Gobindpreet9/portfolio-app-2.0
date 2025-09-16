@@ -1,3 +1,4 @@
+import PageContainer from "@/components/ui/page-container";
 import { ProjectsHeader } from "@/components/projects/projects-header"
 import { ProjectGrid } from "@/components/projects/project-grid"
 import { prisma } from "@/lib/db"
@@ -15,9 +16,9 @@ export default async function ProjectsPage() {
   });
 
   return (
-    <div className="space-y-12 animate-fade-in">
+    <PageContainer className="space-y-12 animate-fade-in">
       <ProjectsHeader />
       <ProjectGrid projects={sortedProjects} />
-    </div>
-  )
+    </PageContainer>
+  );
 }

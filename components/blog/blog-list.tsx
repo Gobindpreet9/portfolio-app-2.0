@@ -1,5 +1,6 @@
 import { formatDistanceToNow } from "date-fns"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -54,12 +55,9 @@ export function BlogList({ posts }: BlogListProps) {
               <CardContent className="p-6 pt-3">
                 <div className="flex flex-wrap gap-2">
                   {post.tags.split(',').map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-accent/20 text-accent-foreground px-3 py-1 rounded-full text-xs font-medium"
-                    >
+                    <Badge key={tag} variant="outline">
                       {tag}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               </CardContent>

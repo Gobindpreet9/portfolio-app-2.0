@@ -3,10 +3,11 @@ import { ContactForm } from "@/components/about/contact-form"
 import { Button } from "@/components/ui/button"
 import { FileDown } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
+import PageContainer from "@/components/ui/page-container";
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-16 animate-fade-in">
+    <PageContainer className="space-y-16 animate-fade-in">
       {/* Header with Download Button */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-8">
         <div className="space-y-4">
@@ -46,6 +47,6 @@ export default function AboutPage() {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </PageContainer>
   )
 }

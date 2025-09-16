@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
 import { Mail } from "lucide-react"
@@ -59,9 +60,9 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium">
+          <Label htmlFor="email">
             Your Email
-          </label>
+          </Label>
           <Input
             id="email"
             name="email"
@@ -73,9 +74,9 @@ export function ContactForm() {
         </div>
         
         <div className="space-y-2">
-          <label htmlFor="subject" className="text-sm font-medium">
+          <Label htmlFor="subject">
             Subject
-          </label>
+          </Label>
           <Input
             id="subject"
             name="subject"
@@ -87,9 +88,9 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium">
+        <Label htmlFor="message">
           Message
-        </label>
+        </Label>
         <Textarea
           id="message"
           name="message"

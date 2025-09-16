@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, Globe, ArrowUpRight } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Github, Globe } from "lucide-react"
 import Image from "next/image"
 
 interface Project {
@@ -13,7 +14,7 @@ interface Project {
   techStack: string[]
   imageUrl: string
   githubUrl: string
-  liveUrl?: string
+  liveUrl?: string | null
   category: string
   featured: boolean
 }
@@ -24,7 +25,7 @@ interface ProjectGridProps {
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {projects.map((project) => (
         <motion.div
           key={project.id}
@@ -64,9 +65,9 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               <div className="flex items-center justify-between">
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 {project.featured && (
-                  <span className="px-2 py-1 text-xs rounded-full bg-accent/20 text-accent-foreground">
+                  <Badge variant="default">
                     Featured
-                  </span>
+                  </Badge>
                 )}
               </div>
               <CardDescription className="h-24 overflow-y-auto card-scroll">
@@ -77,12 +78,9 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
             <CardContent className="flex-grow flex flex-col">
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 text-xs rounded-full bg-secondary text-secondary-foreground"
-                  >
+                  <Badge key={tech} variant="secondary" className="px-2 py-1 text-xs whitespace-nowrap">
                     {tech}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </CardContent>
