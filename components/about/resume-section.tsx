@@ -20,6 +20,19 @@ export function ResumeSection() {
           <div className="space-y-4">
             <div className="flex justify-between items-start">
               <div>
+                <h3 className="text-xl font-medium">Full Stack Software Developer II</h3>
+                <p className="text-primary font-medium">Avigilon (Motorola Solutions)</p>
+              </div>
+              <Badge variant="outline">October 2025 - Present</Badge>
+            </div>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <li>Responsibilities to be added soon</li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex justify-between items-start">
+              <div>
                 <h3 className="text-xl font-medium">Senior Software Engineer</h3>
                 <p className="text-primary font-medium">Persistent Systems</p>
               </div>
