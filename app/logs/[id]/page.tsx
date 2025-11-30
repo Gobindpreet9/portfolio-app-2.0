@@ -11,7 +11,7 @@ import rehypeSlug from "rehype-slug"
 import "katex/dist/katex.min.css"
 import remarkGfm from "remark-gfm"
 import { prisma } from "@/lib/db"
-import { MarkdownComponents } from "@/components/blog/markdown-components"
+import { MarkdownComponents } from "@/components/logs/markdown-components"
 
 // SEO: Dynamic metadata for each blog post
 import type { Metadata } from "next"
