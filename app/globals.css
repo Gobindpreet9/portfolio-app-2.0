@@ -260,12 +260,22 @@ html.dark::before {
 
 /* Logo animation */
 .logo-animate {
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), filter 0.3s ease;
+  transform-origin: center center;
 }
 .logo-animate:hover,
 .logo-animate:focus-visible {
-  transform: scale(1.08) rotate(-6deg);
-  box-shadow: 0 0 16px 0 hsla(var(--primary), 0.15), 0 4px 24px 0 hsla(var(--accent), 0.07);
+  animation: compass-wiggle 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  filter: drop-shadow(0 0 8px hsla(var(--accent), 0.5));
+}
+
+@keyframes compass-wiggle {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1.15) rotate(-12deg); }
+  40% { transform: scale(1.15) rotate(12deg); }
+  60% { transform: scale(1.15) rotate(-6deg); }
+  80% { transform: scale(1.15) rotate(6deg); }
+  100% { transform: scale(1.15) rotate(0deg); }
 }
 
 /* Navbar shadow transition */

@@ -8,7 +8,7 @@ export function ResumeSection() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET</h1>
+          <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET MAKKAR</h1>
           <div className="space-y-2 text-muted-foreground">
             <p>Victoria, BC, Canada</p>
             <p>gobindpreet9@gmail.com</p>
