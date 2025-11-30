@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
@@ -6,8 +6,10 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@vercel/analytics/react"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { Fireflies } from "@/components/fireflies"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" })
 
 export const metadata = {
   title: "Gobind's Portfolio",
@@ -24,14 +26,15 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href="/logo.png" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen bg-background flex flex-col">
+          <div className="min-h-screen flex flex-col">
+            <Fireflies />
             <Navigation />
             <main className="container mx-auto px-4 py-8 flex-1">
               {children}

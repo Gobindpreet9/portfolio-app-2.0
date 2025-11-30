@@ -8,7 +8,7 @@ interface DisclaimerProps {
 const Disclaimer = ({ className }: DisclaimerProps) => {
   return (
     <div className={cn(
-      "flex items-start gap-3 p-4 rounded-lg border border-muted bg-muted/30 text-sm text-muted-foreground",
+      "flex items-start gap-3 p-4 rounded-lg border border-muted bg-muted/30 text-sm text-muted-foreground leather-texture",
       "transition-all duration-300 hover:bg-muted/50 hover:border-muted-foreground/30",
       className
     )}>

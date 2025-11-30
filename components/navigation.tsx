@@ -62,7 +62,7 @@ export function Navigation() {
   }
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 navbar-animate", scrolled ? "navbar-shadow" : "")}>
+    <header className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 navbar-animate leather-texture", scrolled ? "navbar-shadow" : "")}>
       <div className="container flex h-16 items-center">
         {/* Desktop Navigation */}
         <div className="mr-4 hidden md:flex">
@@ -75,7 +75,7 @@ export function Navigation() {
               className="h-12 w-auto logo-animate"
             />
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center space-x-8 text-base font-medium font-serif tracking-wide">
             {routes.map((route) => (
               <Link
                 key={route.href}
@@ -102,7 +102,7 @@ export function Navigation() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[240px] sm:w-[280px]">
-                <nav className="flex flex-col space-y-4 py-4">
+                <nav className="flex flex-col space-y-4 py-4 font-serif tracking-wide">
                   {routes.map((route) => (
                     <Link
                       key={route.href}

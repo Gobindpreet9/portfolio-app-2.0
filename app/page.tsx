@@ -125,7 +125,7 @@ export default function Home() {
                   href="https://github.com/Gobindpreet9" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors icon-animate"
                 >
                   <Github className="h-6 w-6" />
                   <span className="sr-only">GitHub</span>
@@ -138,7 +138,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/gobindpreet-m-0a1141155/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors icon-animate"
                 >
                   <Linkedin className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
@@ -149,7 +149,7 @@ export default function Home() {
               <Button variant="ghost" size="icon" asChild>
                 <a 
                   href="mailto:Gobindpreet9@gmail.com"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors icon-animate"
                 >
                   <Mail className="h-6 w-6" />
                   <span className="sr-only">Email</span>

@@ -26,7 +26,7 @@ export function LogsList({ posts }: BlogListProps) {
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <Link key={post.id} href={`/logs/${post.id}`}>
-          <Card className="overflow-hidden card-hover border-2 flex flex-col h-full min-h-[480px] max-h-[540px] hover:border-primary/50">
+          <Card className="overflow-hidden card-hover border-2 flex flex-col h-full min-h-[480px] max-h-[540px] hover:border-primary/50 leather-texture">
             <div className="aspect-video relative overflow-hidden w-full">
               <Image
                 src={post.imageUrl}

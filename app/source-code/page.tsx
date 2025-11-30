@@ -26,7 +26,7 @@ export default function SourceCodePage() {
       <Separator />
 
       {/* Resume Content */}
-      <div className="bg-card border-2 rounded-xl p-8 shadow-lg">
+      <div className="bg-card border-2 rounded-xl p-8 shadow-lg leather-texture">
         <ResumeSection />
       </div>
 
@@ -47,7 +47,7 @@ export default function SourceCodePage() {
             Interested in working together? Feel free to reach out.
           </p>
         </div>
-        <div className="bg-card border-2 rounded-xl p-8 shadow-lg">
+        <div className="bg-card border-2 rounded-xl p-8 shadow-lg leather-texture">
           <ContactForm />
         </div>
       </div>
