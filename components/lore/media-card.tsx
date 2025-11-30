@@ -28,7 +28,7 @@ export function MediaCard({ item }: MediaCardProps) {
 
   return (
     <div
-      className="relative h-[400px] w-full perspective-1000"
+      className="relative h-[400px] w-full perspective-1000 transition-transform duration-300 hover:scale-[1.02]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsFlipped(!isFlipped)}
@@ -40,7 +40,7 @@ export function MediaCard({ item }: MediaCardProps) {
       >
         {/* Front of card */}
         <div className="absolute w-full h-full backface-hidden">
-          <div className="relative w-full h-full rounded-xl overflow-hidden border-2 bg-card">
+          <div className="relative w-full h-full rounded-xl overflow-hidden border-2 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
             <div className="relative aspect-[2/3] w-full h-full overflow-hidden">
               <img
                 src={item.imageUrl}
@@ -83,7 +83,7 @@ export function MediaCard({ item }: MediaCardProps) {
 
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden rotateY-180">
-          <div className="h-full w-full rounded-xl overflow-hidden border-2 bg-card p-6 flex flex-col">
+          <div className="h-full w-full rounded-xl overflow-hidden border-2 bg-card p-6 flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
             <h3 className="text-xl font-bold mb-2">{item.title}</h3>
             <p className="text-sm text-muted-foreground mb-4">
               {item.creator} • {item.year}

@@ -43,7 +43,7 @@ const buttonHover = {
 export default function Home() {
   return (
     <motion.div 
-      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center max-w-4xl mx-auto px-4 py-16"
+      className="min-h-[calc(100vh-8rem)] flex flex-col justify-center max-w-4xl mx-auto px-4 py-8 md:py-12"
       initial="hidden"
       animate="visible"
       variants={containerVariants} 

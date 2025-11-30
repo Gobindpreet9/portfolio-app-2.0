@@ -27,7 +27,7 @@ export function WisdomBites() {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {wisdoms.map((item, index) => (
-        <Card key={index} className="bg-card border-2 hover:shadow-md transition-all duration-300">
+        <Card key={index} className="bg-card border-2 transition-all duration-300 hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
           <CardContent className="flex flex-col items-center text-center p-6 gap-4 h-full justify-center">
             <Quote className="w-8 h-8 text-primary/20" />
             <div className="space-y-2">

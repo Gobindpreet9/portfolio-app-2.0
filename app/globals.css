@@ -153,6 +153,10 @@
   100% { background-position: 0% center; }
 }
 
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
 /* Navigation link underline slide */
 .nav-underline {
   position: relative;

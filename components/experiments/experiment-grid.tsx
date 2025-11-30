@@ -34,7 +34,7 @@ export function ExperimentGrid({ projects }: ProjectGridProps) {
           transition={{ duration: 0.4 }}
           className="group"
         >
-          <Card className="overflow-hidden border-2 h-full flex flex-col">
+          <Card className="overflow-hidden border-2 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:border-primary/50">
           <div className="relative aspect-[4/3] overflow-hidden">
           <Image
                 src={project.imageUrl}
