@@ -1,0 +1,56 @@
+import { ResumeSection } from "@/components/source-code/resume-section"
+import { ContactForm } from "@/components/source-code/contact-form"
+import { CoreValues } from "@/components/source-code/core-values"
+import { WisdomBites } from "@/components/source-code/wisdom-bites"
+import { Button } from "@/components/ui/button"
+import { FileDown } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
+import PageContainer from "@/components/ui/page-container";
+import PageHeader from "@/components/ui/page-header";
+
+export default function SourceCodePage() {
+  return (
+    <PageContainer className="space-y-16 animate-fade-in">
+      {/* Header */}
+      <PageHeader
+        title="Source Code"
+        description="A detailed look at my core values, experience, and the principles that guide me."
+      />
+
+      {/* Core Values */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold tracking-tight">Core Values</h2>
+        <CoreValues />
+      </div>
+
+      <Separator />
+
+      {/* Resume Content */}
+      <div className="bg-card border-2 rounded-xl p-8 shadow-lg">
+        <ResumeSection />
+      </div>
+
+      <Separator />
+
+      {/* Wisdom Bites */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold tracking-tight">Wisdom Bites</h2>
+        <WisdomBites />
+      </div>
+
+      {/* Contact Section */}
+      <div className="space-y-8">
+        <Separator className="my-8" />
+        <div className="space-y-4">
+          <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
+          <p className="text-muted-foreground text-lg max-w-[600px]">
+            Interested in working together? Feel free to reach out.
+          </p>
+        </div>
+        <div className="bg-card border-2 rounded-xl p-8 shadow-lg">
+          <ContactForm />
+        </div>
+      </div>
+    </PageContainer>
+  )
+}

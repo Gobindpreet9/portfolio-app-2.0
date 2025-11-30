@@ -104,12 +104,12 @@ export default function Home() {
           >
             <motion.div whileHover={buttonHover}>
               <Button asChild>
-                <Link href="/projects">View Projects</Link>
+                <Link href="/experiments">View Projects</Link>
               </Button>
             </motion.div>
             <motion.div whileHover={buttonHover}>
               <Button asChild variant="outline">
-                <Link href="/blog">Read Blog</Link>
+                <Link href="/logs">Read Blog</Link>
               </Button>
             </motion.div>
           </motion.div>

@@ -1,9 +1,9 @@
 import PageContainer from "@/components/ui/page-container";
-import { ProjectsHeader } from "@/components/projects/projects-header"
-import { ProjectGrid } from "@/components/projects/project-grid"
+import { ExperimentsHeader } from "@/components/experiments/experiments-header"
+import { ExperimentGrid } from "@/components/experiments/experiment-grid"
 import { prisma } from "@/lib/db"
 
-export default async function ProjectsPage() {
+export default async function ExperimentsPage() {
   // Fetch all projects and sort so featured are first, then by createdAt desc
   const projects = await prisma.project.findMany({
     orderBy: { createdAt: "desc" },
@@ -17,8 +17,8 @@ export default async function ProjectsPage() {
 
   return (
     <PageContainer className="space-y-12 animate-fade-in">
-      <ProjectsHeader />
-      <ProjectGrid projects={sortedProjects} />
+      <ExperimentsHeader />
+      <ExperimentGrid projects={sortedProjects} />
     </PageContainer>
   );
 }

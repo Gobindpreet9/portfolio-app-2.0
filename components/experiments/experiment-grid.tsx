@@ -23,7 +23,7 @@ interface ProjectGridProps {
   projects: Project[]
 }
 
-export function ProjectGrid({ projects }: ProjectGridProps) {
+export function ExperimentGrid({ projects }: ProjectGridProps) {
   return (
     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {projects.map((project) => (

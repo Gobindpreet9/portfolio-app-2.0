@@ -32,24 +32,24 @@ export function Navigation() {
       active: pathname === "/",
     },
     {
-      href: "/blog",
-      label: "Blog",
-      active: pathname === "/blog",
+      href: "/logs",
+      label: "Logs",
+      active: pathname === "/logs",
     },
     {
-      href: "/projects",
-      label: "Projects",
-      active: pathname === "/projects",
+      href: "/experiments",
+      label: "Experiments",
+      active: pathname === "/experiments",
     },
     {
-      href: "/about",
-      label: "About",
-      active: pathname === "/about",
+      href: "/source-code",
+      label: "Source Code",
+      active: pathname === "/source-code",
     },
     {
-      href: "/personality",
-      label: "Personality",
-      active: pathname === "/personality",
+      href: "/lore",
+      label: "Lore",
+      active: pathname === "/lore",
     },
   ]
 

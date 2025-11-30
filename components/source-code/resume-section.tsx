@@ -1,15 +1,30 @@
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { FileDown } from "lucide-react"
 
 export function ResumeSection() {
   return (
     <div className="space-y-12">
       {/* Header */}
-      <div className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET</h1>
-        <div className="space-y-2 text-muted-foreground">
-          <p>Victoria, BC, Canada</p>
-          <p>gobindpreet9@gmail.com</p>
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+        <div className="space-y-4">
+          <h1 className="text-3xl font-bold tracking-tight">GOBINDPREET</h1>
+          <div className="space-y-2 text-muted-foreground">
+            <p>Victoria, BC, Canada</p>
+            <p>gobindpreet9@gmail.com</p>
+          </div>
         </div>
+        <Button 
+          asChild 
+          size="lg" 
+          variant="outline"
+          className="shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-auto shrink-0"
+        >
+          <a href="/resume.pdf" download className="flex items-center gap-2">
+            <FileDown className="w-5 h-5" />
+            Download Resume
+          </a>
+        </Button>
       </div>
 
       {/* Experience */}

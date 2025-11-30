@@ -1,9 +1,9 @@
-import { PersonalityHeader } from "@/components/personality/personality-header"
-import { MediaTabs } from "@/components/personality/media-tabs"
+import { LoreHeader } from "@/components/lore/lore-header"
+import { MediaTabs } from "@/components/lore/media-tabs"
 import { prisma } from "@/lib/db"
-import type { MediaItem } from "@/components/personality/media-card"
+import type { MediaItem } from "@/components/lore/media-card"
 
-export default async function PersonalityPage() {
+export default async function LorePage() {
   const mediaItems = await prisma.mediaItem.findMany({
     orderBy: { dateConsumed: "desc" },
   })
@@ -16,7 +16,7 @@ export default async function PersonalityPage() {
 
   return (
     <div className="space-y-8 animate-fade-in">
-      <PersonalityHeader />
+      <LoreHeader />
       <MediaTabs mediaItems={sortedMediaItems as MediaItem[]} />
     </div>
   )

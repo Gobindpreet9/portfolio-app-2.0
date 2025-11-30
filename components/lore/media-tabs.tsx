@@ -1,7 +1,7 @@
 "use client"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MediaGrid } from "@/components/personality/media-grid"
+import { MediaGrid } from "@/components/lore/media-grid"
 import type { MediaItem } from "./media-card"
 
 interface MediaTabsProps {

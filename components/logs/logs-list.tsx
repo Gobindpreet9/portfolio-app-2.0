@@ -21,11 +21,11 @@ interface BlogListProps {
   posts: BlogPost[]
 }
 
-export function BlogList({ posts }: BlogListProps) {
+export function LogsList({ posts }: BlogListProps) {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
-        <Link key={post.id} href={`/blog/${post.id}`}>
+        <Link key={post.id} href={`/logs/${post.id}`}>
           <Card className="overflow-hidden card-hover border-2 flex flex-col h-full min-h-[480px] max-h-[540px]">
             <div className="aspect-video relative overflow-hidden w-full">
               <Image
