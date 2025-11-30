@@ -47,6 +47,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.kym-cdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'substackcdn.com',
+      },
     ],
   },
 };

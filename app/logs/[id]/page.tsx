@@ -85,7 +85,7 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
     <article className="max-w-3xl mx-auto animate-fade-in">
       {/* Back button */}
       <Link 
-        href="/blog" 
+        href="/logs" 
         className="inline-flex items-center text-muted-foreground hover:text-primary mb-8"
       >
         <ChevronLeft className="w-4 h-4 mr-2" />
@@ -143,7 +143,7 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
             Last updated: {formatDistanceToNow(new Date(post.updatedAt), { addSuffix: true })}
           </div>
           <Link 
-            href="/blog" 
+            href="/logs" 
             className="inline-flex items-center gap-2 text-primary hover:underline"
           >
             <ChevronLeft className="w-4 h-4" />

@@ -6,7 +6,7 @@ export default function NotFound() {
       <h2 className="text-2xl font-bold">Article Not Found</h2>
       <p className="text-muted-foreground">Could not find the requested blog post.</p>
       <Link 
-        href="/blog"
+        href="/logs"
         className="text-primary hover:underline"
       >
         View all articles
