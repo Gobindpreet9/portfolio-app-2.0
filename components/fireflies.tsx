@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { usePathname } from "next/navigation"
 
 interface Firefly {
   id: number
@@ -28,7 +29,13 @@ const CONFIG = {
   EDGE_PADDING: 50
 }
 
-export function Fireflies({ count = 15 }: FirefliesProps) {
+export function Fireflies({ count: propCount = 15 }: FirefliesProps) {
+  const pathname = usePathname()
+  
+  // Use fewer fireflies on individual log pages to reduce distraction
+  const isLogPage = pathname?.startsWith('/logs/') && pathname !== '/logs'
+  const count = isLogPage ? 5 : propCount
+
   const containerRef = useRef<HTMLDivElement>(null)
   const requestRef = useRef<number>()
   const mouseRef = useRef({ x: -1000, y: -1000, isDown: false })

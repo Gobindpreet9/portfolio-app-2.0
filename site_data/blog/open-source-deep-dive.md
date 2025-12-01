@@ -11,10 +11,12 @@ The impact is staggering. Linux powers most of the internet's servers. Python is
 
 Yet open source remains paradoxical. Why would talented developers give away their work for free? I've seen open source maintainers get frustrated when people use their software without contributing back. Some projects thrive for decades; others burn out. So what do we really mean by "free software"? What drives these contributors? And how did we get here? In this piece, we'll explore the origins of open source, the motivations that fuel it, pivotal moments in its evolution, and what the future holds.
 
-## The Birth and Evolution of Open Source
+## The Birth of Open Source
 
 ### The Idealist: Richard Stallman and the Free Software Movement
-Open source didn't start with a business plan—it started with principle. The spark came from an unlikely place: a printer. In the 1980s, Richard Stallman, a prominent computer programmer and hacker, wanted to modify a Xerox 9700 printer to notify users when it jammed. Xerox refused to share the source code. Stallman saw this as a betrayal of the hacker spirit—the collaborative ethos of freely sharing knowledge and tools. Frustrated, he wrote the [GNU Manifesto](https://www.gnu.org/gnu/manifesto.en.html) and launched the [Free Software Movement](https://www.fsf.org/about/), declaring war on proprietary software.
+Open source didn't start with a business plan—it started with principle. The spark came from an unlikely place: a printer. In the 1980s, Richard Stallman, a prominent computer programmer and hacker, wanted to modify a Xerox 9700 printer to notify users when it jammed. Xerox refused to share the source code. Stallman saw this as a betrayal of the hacker spirit—the collaborative ethos of freely sharing knowledge and tools. Frustrated, he wrote the [GNU Manifesto](https://www.gnu.org/gnu/manifesto.en.html) and launched the [Free Software Foundation](https://www.fsf.org/about/), declaring war on proprietary software.
+
+While the primary purpose of GNU was develop an entirely free Unix-like operating system, FSF was founded to provide organizational and legal structure for the free software movement and GNU project. It handles responsibilites like licensing, awareness campaigns, resources and certifications. GNU General Public License was vital contribution that we shall discuss later.
 
 Stallman's vision was radical: software should be free; not just in cost, but in freedom. Users should be able to inspect it, modify it, and share it. This wasn't about money; it was about power and control.
 
@@ -29,20 +31,21 @@ This development model became so influential that years later, Eric S. Raymond d
 ### The Bridge: OSI and Bringing Open Source to Business
 By the late 1990s, open source had proven itself. But there was a problem: the term "free software" created confusion. People heard "free" and thought "no cost," missing the deeper meaning of freedom. This skepticism about quality, reliability, and support models kept enterprises away.
 
-In 1998, the [Open Source Initiative (OSI)](https://opensource.org/about) was founded to reframe the movement. Instead of fighting about freedom and morality, OSI focused on pragmatism: open source works because it produces better software, faster. This rebranding was crucial. It made open source palatable to business, transforming it from a fringe movement into a viable strategy for enterprises. Their mission: educate, advocate, and grow the open source community—and it worked.
+In 1998, the [Open Source Initiative (OSI)](https://opensource.org/about) was founded by Eric S. Raymond and Bruce Perens to reframe the movement. Instead of fighting about freedom and morality, OSI focused on pragmatism: open source works because it produces better software, faster. This rebranding was crucial. It made open source palatable to business, transforming it from a fringe movement into a viable strategy for enterprises. Their mission: educate, advocate, and grow the open source community—and it worked.
 
-## Major Open Source Milestones
-### Early Pioneers
-- GNU/Linux
-- Apache HTTP Server
+## Catching Fire: The Browser Wars and the Open Web
 
-### Browser Wars and the Open Web
-- Netscape, Mozilla, Firefox
-- Rise of open web standards
+### Embrace, Extend and Extinguish
+In the 1990s, it was still early days for the internet. It was sparking a massive public interest which led to the development of Netscape's Navigator Browser, released in 1994. It quickly became the dominant way to navigate the nascent internet. Their IPO in 1995, largest at the time, signalled that this was a a real new technological wave worth paying attention to. In the 1998 antitrust case against Microsoft by the U.S. Department of Justice, we get a deep insight into Microsoft's strategy to handle competition like this. Initially they **embrace** exisiting standards - the license code of Mosaic, the ancestor of Navigator to get a jumpstart. Next they **extend** the standard open protocols using proprietary features causing incompaitibility and friction for competitors - some websites only work on Internet Explorer. **Extinguish** competition using established power - bundling, exclusive deals, pressuring partners, predatory pricing. 
+
+In the end it was not a fair battle. In a final ditch effort, Netscape announced in 1998 that they would open source its browser code as they thought they could not compete with Microsoft with their own resources only. Up until this point, open source software was seen as businesses as counter-cultural non-commericial oddity. While the move was not able to save Netscape, it led to the birth of Mozilla Foundation and spurred a lot of global interest and investment in the open source model.
+
+The parting gift
 
 ### Enterprise Adoption
 - IBM embraces Linux
 - Microsoft's shift toward open source
+- Google's Android 
 
 ### Modern Open Source Powerhouses
 - Google's Kubernetes
@@ -152,3 +155,5 @@ https://www.gnu.org/gnu/manifesto.en.html
 https://www.fsf.org/about/
 https://en.wikipedia.org/wiki/Linux_kernel
 https://www.linux.com/training-tutorials/linus-torvalds-and-richard-stallman/
+https://www.investopedia.com/ask/answers/09/browser-wars-netscape-internet-explorer.asp
+https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish
