@@ -5,7 +5,7 @@ export function LoreHeader() {
         Lore
       </h1>
       <p className="text-muted-foreground max-w-[700px] text-lg leading-relaxed">
-        Explore the stories, games, and knowledge that fuel my creativity. Hover to see ratings and click cards to read my thoughts.
+        The stories, places, and experiences that shape my thinking. Click any card to read my thoughts.
       </p>
     </div>
   )
