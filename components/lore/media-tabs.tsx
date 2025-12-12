@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { MediaGrid } from "@/components/lore/media-grid"
+import { TravelMap } from "@/components/lore/travel-map"
 import type { MediaItem } from "./media-card"
 
 interface MediaTabsProps {
@@ -16,10 +17,11 @@ export function MediaTabs({ mediaItems }: MediaTabsProps) {
 
   return (
     <Tabs defaultValue="books" className="w-full">
-      <TabsList className="grid w-full max-w-[400px] grid-cols-3 mb-8">
+      <TabsList className="grid w-full max-w-[520px] grid-cols-4 mb-8">
         <TabsTrigger value="books">Books</TabsTrigger>
         <TabsTrigger value="movies">Movies & TV</TabsTrigger>
         <TabsTrigger value="games">Games</TabsTrigger>
+        <TabsTrigger value="travels">Travels</TabsTrigger>
       </TabsList>
       <TabsContent value="books">
         <MediaGrid items={books} />
@@ -29,6 +31,9 @@ export function MediaTabs({ mediaItems }: MediaTabsProps) {
       </TabsContent>
       <TabsContent value="games">
         <MediaGrid items={games} />
+      </TabsContent>
+      <TabsContent value="travels">
+        <TravelMap />
       </TabsContent>
     </Tabs>
   )
