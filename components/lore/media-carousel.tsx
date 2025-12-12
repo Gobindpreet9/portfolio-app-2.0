@@ -145,9 +145,6 @@ export function MediaCarousel({ items }: MediaCarouselProps) {
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <h3 className="text-lg font-bold text-white mb-1 line-clamp-2">{item.title}</h3>
                       <p className="text-sm text-white/70 mb-3">{item.creator}</p>
-                      <div className="flex items-center gap-0.5">
-                        {renderStars(item.rating)}
-                      </div>
                     </div>
                     
                     {/* Hover hint */}
