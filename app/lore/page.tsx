@@ -1,5 +1,6 @@
-import { LoreHeader } from "@/components/lore/lore-header"
 import { LoreSection } from "@/components/lore/lore-section"
+import PageHeader from "@/components/ui/page-header"
+import PageContainer from "@/components/ui/page-container"
 import { MediaCarousel } from "@/components/lore/media-carousel"
 import { TravelMap } from "@/components/lore/travel-map"
 import { prisma } from "@/lib/db"
@@ -23,8 +24,11 @@ export default async function LorePage() {
   const games = sortedMediaItems.filter(item => item.type === "game") as MediaItem[]
 
   return (
-    <div className="space-y-16 animate-fade-in">
-      <LoreHeader />
+    <PageContainer className="space-y-16 animate-fade-in">
+      <PageHeader
+        title="Lore"
+        description="The stories, places, and experiences that shape my thinking. Click any card to read my thoughts."
+      />
       
       <LoreSection
         icon={<BookOpen className="w-5 h-5 text-primary" />}
@@ -61,6 +65,6 @@ export default async function LorePage() {
       >
         <TravelMap />
       </LoreSection>
-    </div>
+    </PageContainer>
   )
 }

@@ -110,7 +110,7 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
           <span>•</span>
           <span>{post.readTime}</span>
         </div>
-        <h1 className="text-4xl font-bold tracking-tight leading-tight text-primary mb-2">
+        <h1 className="hero-title text-4xl font-bold tracking-tight leading-tight mb-2">
           {post.title}
         </h1>
         <div className="flex flex-wrap gap-2">

@@ -2,8 +2,6 @@ import { ResumeSection } from "@/components/source-code/resume-section"
 import { ContactForm } from "@/components/source-code/contact-form"
 import { CoreValues } from "@/components/source-code/core-values"
 import { WisdomBites } from "@/components/source-code/wisdom-bites"
-import { Button } from "@/components/ui/button"
-import { FileDown } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import PageContainer from "@/components/ui/page-container";
 import PageHeader from "@/components/ui/page-header";
