@@ -2,6 +2,18 @@
 
 ## Open Source Business Models
 
+### GitHub: Democratizing Contribution (2008)
+- Social coding and the pull request model
+- Lowering the barrier to contribute
+- From mailing lists to one-click forks
+- The platform that made open source accessible to everyone
+
+### Microsoft's Heel Turn
+- Ballmer's "Linux is a cancer" (2001)
+- The slow thaw: .NET Core, VS Code, TypeScript
+- Buying GitHub (2018)
+- One of tech's most dramatic reversals 
+
 ### Enterprise Adoption
 - IBM embraces Linux
 - Google's Android 
