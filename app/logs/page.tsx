@@ -5,7 +5,10 @@ import PageContainer from "@/components/ui/page-container";
 import Disclaimer from "@/components/ui/disclaimer";
 
 export default async function LogsPage() {
+  const isDev = process.env.NODE_ENV === "development";
+  
   const posts = await prisma.blog.findMany({
+    where: isDev ? {} : { published: true },
     orderBy: { createdAt: "desc" },
   });
 

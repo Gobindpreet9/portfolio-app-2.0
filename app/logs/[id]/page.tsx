@@ -73,11 +73,14 @@ export async function generateMetadata(props: Promise<{ params: { id: string } }
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
   const { id } = await params;
+  const isDev = process.env.NODE_ENV === "development";
+  
   const post = await prisma.blog.findUnique({
     where: { id },
   })
 
-  if (!post) {
+  // Block access to unpublished posts in production
+  if (!post || (!isDev && !post.published)) {
     notFound();
   }
 
