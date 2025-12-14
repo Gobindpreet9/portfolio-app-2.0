@@ -51,6 +51,11 @@ export function Navigation() {
       label: "Lore",
       active: pathname === "/lore",
     },
+    {
+      href: "/contact",
+      label: "Contact",
+      active: pathname === "/contact",
+    },
   ]
 
   if (process.env.NODE_ENV === 'development') {

@@ -1,5 +1,4 @@
 import { ResumeSection } from "@/components/source-code/resume-section"
-import { ContactForm } from "@/components/source-code/contact-form"
 import { CoreValues } from "@/components/source-code/core-values"
 import { WisdomBites } from "@/components/source-code/wisdom-bites"
 import { Separator } from "@/components/ui/separator"
@@ -36,19 +35,6 @@ export default function SourceCodePage() {
         <WisdomBites />
       </div>
 
-      {/* Contact Section */}
-      <div className="space-y-8">
-        <Separator className="my-8" />
-        <div className="space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
-          <p className="text-muted-foreground text-lg max-w-[600px]">
-            Interested in working together? Feel free to reach out.
-          </p>
-        </div>
-        <div className="bg-card border-2 rounded-xl p-8 shadow-lg leather-texture">
-          <ContactForm />
-        </div>
-      </div>
     </PageContainer>
   )
 }

@@ -135,7 +135,7 @@ export default function Home() {
             <motion.div whileHover={buttonHover}>
               <Button variant="ghost" size="icon" asChild>
                 <a 
-                  href="https://www.linkedin.com/in/gobindpreet-m-0a1141155/" 
+                  href="https://www.linkedin.com/in/gobindpreet-makkar/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors icon-animate"

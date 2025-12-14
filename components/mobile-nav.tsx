@@ -37,6 +37,11 @@ export function MobileNav() {
       label: "Lore",
       active: pathname === "/lore",
     },
+    {
+      href: "/contact",
+      label: "Contact",
+      active: pathname === "/contact",
+    },
   ]
 
   return (

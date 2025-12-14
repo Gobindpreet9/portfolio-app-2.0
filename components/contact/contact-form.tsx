@@ -6,11 +6,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
-import { Mail } from "lucide-react"
+import { Mail, Check } from "lucide-react"
 
 export function ContactForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSent, setIsSent] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -32,6 +33,7 @@ export function ContactForm() {
         body: JSON.stringify({ name, email, message, website }), // include honeypot
       })
       if (res.ok) {
+        setIsSent(true)
         toast({
           title: 'Message sent!',
           description: 'Thank you for reaching out. I will get back to you soon.',
@@ -101,13 +103,31 @@ export function ContactForm() {
         />
       </div>
 
+      {/* Honeypot field - hidden from users, bots will fill it */}
+      <input
+        type="text"
+        name="website"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <Button 
         type="submit" 
-        disabled={isSubmitting} 
+        disabled={isSubmitting || isSent} 
         className="w-full sm:w-auto text-lg h-12 px-8"
       >
-        <Mail className="w-5 h-5 mr-2" />
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSent ? (
+          <>
+            <Check className="w-5 h-5 mr-2" />
+            Sent!
+          </>
+        ) : (
+          <>
+            <Mail className="w-5 h-5 mr-2" />
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </>
+        )}
       </Button>
     </form>
   )

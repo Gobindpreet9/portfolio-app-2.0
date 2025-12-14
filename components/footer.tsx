@@ -34,6 +34,9 @@ export function Footer() {
             <Link href="/lore" className="hover:text-foreground transition-colors">
               Lore
             </Link>
+            <Link href="/contact" className="hover:text-foreground transition-colors">
+              Contact
+            </Link>
           </nav>
 
           {/* Social Links */}
@@ -48,7 +51,7 @@ export function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/gobindpreet-m-0a1141155/"
+              href="https://www.linkedin.com/in/gobindpreet-makkar/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors icon-animate"
