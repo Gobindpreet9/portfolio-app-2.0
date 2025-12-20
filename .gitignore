@@ -33,6 +33,7 @@ Thumbs.db
 # Build artifacts
 dist/
 coverage/
+tsconfig.tsbuildinfo
 
 # Misc
 *.log

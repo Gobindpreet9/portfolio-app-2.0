@@ -21,6 +21,15 @@ model Project {
   updatedAt   DateTime @updatedAt
 }
 
+model Series {
+  id          String   @id @default(cuid())
+  name        String   // "Open Source"
+  description String?  // Optional series description
+  coverImage  String   // "/open-source-series-cover.png"
+  createdAt   DateTime @default(now())
+  posts       Blog[]
+}
+
 model Blog {
   id          String   @id @default(cuid())
   title       String
@@ -32,6 +41,9 @@ model Blog {
   readTime    String
   imageUrl    String
   excerpt     String
+  seriesId    String?
+  seriesOrder Int?
+  series      Series?  @relation(fields: [seriesId], references: [id])
 }
 
 model MediaItem {
