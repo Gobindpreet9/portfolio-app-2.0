@@ -16,7 +16,7 @@ const Disclaimer = ({ className }: DisclaimerProps) => {
       <div className="space-y-1">
         <p className="font-medium text-foreground">AI Assistance Disclosure</p>
         <p className="leading-relaxed">
-            AI assists in creation of these articles. However, the curation, editing, direction, core ideas are a product of my vision, hence the final quality - whether good or bad - is my responsibility.
+            AI may assist in creation of these articles. However, the ideas, curation, and final edits are guided by my vision, so the final quality is my responsibility.
         </p>
       </div>
     </div>
