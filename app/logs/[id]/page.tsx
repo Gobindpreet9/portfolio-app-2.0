@@ -33,7 +33,7 @@ export async function generateMetadata(props: Promise<{ params: { id: string } }
 
   // Use excerpt if available, otherwise fallback to first 150 chars of content
   const description = post.excerpt || post.content.slice(0, 150).replace(/\n/g, " ") + "..."
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${id}`
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/logs/${id}`
 
   return {
     title: post.title + " | Gobind's Portfolio",

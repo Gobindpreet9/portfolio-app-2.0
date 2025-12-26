@@ -3,6 +3,30 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  async redirects() {
+    return [
+      {
+        source: '/blog',
+        destination: '/logs',
+        permanent: true,
+      },
+      {
+        source: '/blog/:path*',
+        destination: '/logs/:path*',
+        permanent: true,
+      },
+      {
+        source: '/log',
+        destination: '/logs',
+        permanent: true,
+      },
+      {
+        source: '/log/:path*',
+        destination: '/logs/:path*',
+        permanent: true,
+      },
+    ];
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

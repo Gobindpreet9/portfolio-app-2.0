@@ -18,12 +18,12 @@ export async function GET() {
       priority: "1.0",
     },
     {
-      loc: `${baseUrl}/blog`,
+      loc: `${baseUrl}/logs`,
       changefreq: "weekly",
       priority: "0.8",
     },
     ...posts.map(post => ({
-      loc: `${baseUrl}/blog/${post.id}`,
+      loc: `${baseUrl}/logs/${post.id}`,
       changefreq: "monthly",
       priority: "0.7",
       lastmod: post.updatedAt.toISOString(),
