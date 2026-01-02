@@ -11,7 +11,6 @@ model Project {
   id          String   @id @default(cuid())
   title       String
   description String
-  techStack   String[]
   imageUrl    String
   githubUrl   String
   liveUrl     String?
@@ -19,13 +18,14 @@ model Project {
   featured    Boolean  @default(false)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  techStack   String[]
 }
 
 model Series {
   id          String   @id @default(cuid())
-  name        String   // "Open Source"
-  description String?  // Optional series description
-  coverImage  String   // "/open-source-series-cover.png"
+  name        String
+  description String?
+  coverImage  String
   createdAt   DateTime @default(now())
   posts       Blog[]
 }
@@ -48,17 +48,17 @@ model Blog {
 
 model MediaItem {
   id           String   @id @default(cuid())
-  type         String   // "book", "movie", "game"
+  type         String
   title        String
-  creator      String
-  rating       Int  
+  rating       Int
   imageUrl     String
   review       String
   dateConsumed DateTime
   isFavorite   Boolean
+  creator      String
   link         String
   year         Int
-} 
+}
 
 model ContactMessage {
   id        String   @id @default(cuid())

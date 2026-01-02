@@ -8,7 +8,7 @@ const wisdoms = [
     text: "Treat others as you would like to be treated.",
     source: "The Golden Rule"
   },
-  
+
   {
     text: "Everything should be made as simple as possible, but not simpler.",
     source: "Albert Einstein"
@@ -20,6 +20,10 @@ const wisdoms = [
   {
     text: "To a man with a hammer, everything looks like a nail.",
     source: "Abraham Maslow"
+  },
+  {
+    text: "Be fearful when others are greedy, and greedy when others are fearful",
+    source: "Warren Buffett"
   }
 ]
 
