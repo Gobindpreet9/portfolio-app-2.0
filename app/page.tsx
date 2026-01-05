@@ -19,8 +19,8 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { type: "spring", stiffness: 100, damping: 10 }
   },
@@ -35,24 +35,24 @@ const photoVariants = {
   },
 };
 
-const buttonHover = { 
+const buttonHover = {
   scale: 1.05,
   transition: { type: "spring", stiffness: 300, damping: 15 }
 };
 
 export default function Home() {
   return (
-    <motion.div 
+    <motion.div
       className="min-h-[calc(100vh-8rem)] flex flex-col justify-center max-w-4xl mx-auto px-4 py-8 md:py-12"
       initial="hidden"
       animate="visible"
-      variants={containerVariants} 
+      variants={containerVariants}
     >
-      <motion.div 
+      <motion.div
         className="grid gap-16 md:grid-cols-2 md:gap-12 items-start"
       >
         {/* Photo Section */}
-        <motion.div 
+        <motion.div
           className="relative w-48 h-48 mx-auto md:w-64 md:h-64 rounded-full overflow-hidden bg-muted order-1 md:order-2 ring-2 ring-primary/20 shadow-xl"
           variants={photoVariants}
         >
@@ -66,39 +66,39 @@ export default function Home() {
         </motion.div>
 
         {/* Bio Section */}
-        <motion.div 
+        <motion.div
           className="space-y-8 order-2 md:order-1"
-          variants={containerVariants} 
+          variants={containerVariants}
         >
           <motion.div className="space-y-4" variants={itemVariants}>
-            <motion.h1 
+            <motion.h1
               className="hero-title text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl"
               variants={itemVariants}
             >
               Hello! I am Gobind
             </motion.h1>
-            <motion.div 
+            <motion.div
               className="space-y-4 text-muted-foreground leading-relaxed"
-              variants={containerVariants} 
+              variants={containerVariants}
             >
               <motion.p variants={itemVariants}>
-              I write code that always works on the first try, architect systems that 
-              scale beyond my expectations, and debug problems that only happen on Fridays. 
-              Philosophy keeps me sane when the stack traces get existential,
-              and psychology helps me understand why users click the one button I didn't 
-              expect.
+                I'm a generalist problem solver and builder. I write code that always
+                works on the first try, architect systems that scale beyond my expectations,
+                and debug problems that only happen on Fridays. Philosophy keeps me sane
+                when the stack traces get existential, and psychology helps me understand
+                why users click the one button I didn't expect.
               </motion.p>
               <motion.p variants={itemVariants}>
-              Between soccer games where I learn about teamwork and guitar sessions 
-              where I learn about timing, I'm exploring how we can use AI and quantum
-              computing to tackle the big problems - like making sure future developers don't 
-              curse my variable names.
+                Between soccer games where I learn about teamwork and guitar sessions
+                where I learn about timing, I'm exploring all the shiny new tech that
+                catches my eye i.e. anything that blinks, beeps, or compiles.
+                Currently focused on making sure future developers don't curse my variable names.
               </motion.p>
             </motion.div>
           </motion.div>
 
           {/* Navigation Links */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4"
             variants={itemVariants}
           >
@@ -115,15 +115,15 @@ export default function Home() {
           </motion.div>
 
           {/* Social Links */}
-          <motion.div 
+          <motion.div
             className="flex gap-4 pt-4"
             variants={itemVariants}
           >
             <motion.div whileHover={buttonHover}>
               <Button variant="ghost" size="icon" asChild>
-                <a 
-                  href="https://github.com/Gobindpreet9" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/Gobindpreet9"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors icon-animate"
                 >
@@ -134,9 +134,9 @@ export default function Home() {
             </motion.div>
             <motion.div whileHover={buttonHover}>
               <Button variant="ghost" size="icon" asChild>
-                <a 
-                  href="https://www.linkedin.com/in/gobindpreet-makkar/" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/gobindpreet-makkar/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors icon-animate"
                 >
@@ -147,7 +147,7 @@ export default function Home() {
             </motion.div>
             <motion.div whileHover={buttonHover}>
               <Button variant="ghost" size="icon" asChild>
-                <a 
+                <a
                   href="mailto:Gobindpreet9@gmail.com"
                   className="hover:text-primary transition-colors icon-animate"
                 >
