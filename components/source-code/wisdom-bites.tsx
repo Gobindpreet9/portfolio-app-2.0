@@ -24,6 +24,10 @@ const wisdoms = [
   {
     text: "Be fearful when others are greedy, and greedy when others are fearful",
     source: "Warren Buffett"
+  },
+  {
+    text: "Hope for the best, and prepare for the worst.",
+    source: "Timeless Wisdom"
   }
 ]
 
