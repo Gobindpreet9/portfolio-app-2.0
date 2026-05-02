@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { FileDown } from "lucide-react"
+import { FileDown, Shield } from "lucide-react"
 
 export function ResumeSection() {
   return (
@@ -14,9 +14,9 @@ export function ResumeSection() {
             <p>gobindpreet9@gmail.com</p>
           </div>
         </div>
-        <Button 
-          asChild 
-          size="lg" 
+        <Button
+          asChild
+          size="lg"
           variant="outline"
           className="shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-auto shrink-0"
         >
@@ -30,7 +30,7 @@ export function ResumeSection() {
       {/* Experience */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight border-b pb-2">EXPERIENCE</h2>
-        
+
         <div className="space-y-8">
           <div className="space-y-4">
             <div className="flex justify-between items-start">
@@ -95,6 +95,24 @@ export function ResumeSection() {
         </div>
       </section>
 
+      {/* Certifications & Security */}
+      <section className="space-y-6">
+        <div className="flex items-center gap-2 border-b pb-2">
+          <Shield className="w-5 h-5 text-primary" />
+          <h2 className="text-2xl font-semibold tracking-tight uppercase">Certifications & Security</h2>
+        </div>
+        <div className="flex justify-center sm:justify-start">
+          <iframe
+            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=6508095"
+            width="327"
+            height="84"
+            style={{ border: 'none' }}
+            title="TryHackMe Badge"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </section>
+
       {/* Education */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight border-b pb-2">EDUCATION</h2>
@@ -129,11 +147,11 @@ export function ResumeSection() {
           <h3 className="font-medium">Hobbies & Interests</h3>
           <div className="flex flex-wrap gap-2">
             {[
-              "Soccer", 
-              "Books", 
-              "Guitar", 
-              "Hiking", 
-              "AI", 
+              "Soccer",
+              "Books",
+              "Guitar",
+              "Hiking",
+              "AI",
               "Blogging",
               "Video Games"
             ].map((hobby) => (

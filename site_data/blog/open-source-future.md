@@ -21,6 +21,7 @@
 
 ### Community-Driven Security Initiatives
 - Security teams, audits, bug bounties
+Open source sustainability crisis — Maintainer burnout, funding models
 
 ### Case Studies and Lessons Learned
 - Log4Shell (2021): The wake-up call

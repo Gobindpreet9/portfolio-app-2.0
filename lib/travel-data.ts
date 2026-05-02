@@ -9,6 +9,7 @@ export interface TravelLocation {
 // ISO 3166-1 numeric codes (used by world-atlas TopoJSON)
 // Canada = 124, India = 356
 export const visitedCountries: TravelLocation[] = [
-  { countryCode: "356", countryName: "India", visitYear: "1999" },
+  { countryCode: "356", countryName: "India", visitYear: "1999", note: "Birth Nation 👶" },
   { countryCode: "124", countryName: "Canada", visitYear: "2018", note: "Home 🏠" },
+  { countryCode: "608", countryName: "Philippines", visitYear: "2026", note: "Mahal's birth nation" },
 ]

@@ -27,7 +27,7 @@ const wisdoms = [
   },
   {
     text: "Hope for the best, and prepare for the worst.",
-    source: "Timeless Wisdom"
+    source: "Stoic Principle"
   }
 ]
 
