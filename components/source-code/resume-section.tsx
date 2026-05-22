@@ -41,7 +41,11 @@ export function ResumeSection() {
               <Badge variant="outline">October 2025 - Present</Badge>
             </div>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Responsibilities to be added soon</li>
+              <li>Designed and developed AI-powered developer tools, MCPs, and automated diagnostics to reduce toil and measurably improve team productivity</li>
+              <li>Drove engineering team adoption of AI-assisted workflows by sharing the latest tooling information, best practices, and holding regular demo sessions</li>
+              <li>Migrated legacy test infrastructure into CI/CD pipelines, improving release confidence and deployment reliability</li>
+              <li>Led feature delivery for an enterprise video security platform serving 50,000+ global installations</li>
+              <li>Investigated and fixed complex issues across a C#/.NET microservices architecture with a legacy monolithic C++ companion</li>
             </ul>
           </div>
 
